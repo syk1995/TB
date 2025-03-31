@@ -1,7 +1,7 @@
 #!/bin/bash
 
-RawDIR="/data_ilc/flc/tb-desy/2025/TB2025-03/beamData/raw"
-RootDir="/home/llr/ilc/shi/data/TB_2025_3/TB_Data/raw2root/Position_Scan"
+RawDIR="/data_ilc/flc/tb-desy/2025/TB2025-03/beamData/eudaq_data/raw"
+RootDir=/data_ilc/flc/shi/TB_2025_3/TB_Data/selected_root/TDC
 #Position_Scan
 ranges=(
     "90623-90646"
@@ -11,14 +11,14 @@ ranges=(
 #TDC
 ranges=(
     "90748-90751"
-    "90760-90769"
+    "90760-90767"
 )
-ranges=("90660-90660")
+#ranges=("90623-90623")
 for range in "${ranges[@]}"; do
     IFS='-' read -r start end <<< "$range"
     for (( run=start; run<=end; run++ )); do
         raw_file="${RawDIR}/raw_siwecal_${run}.raw"
-        root_file=${RootDir}/siwecal_${run}.root
+        root_file=${RootDir}/selected_${run}.root
         if [[ ! -f "${raw_file}" ]]; then
             echo "${raw_file} not found"
             continue
@@ -39,7 +39,7 @@ for range in "${ranges[@]}"; do
         fi
         raw_size=$(( $raw_size / (1048576) ))
         root_size=$(( $root_size / (1048576) ))
-        echo ${run} ${root_file}
+        echo ${run} ${root_file} > datalist/run_${run}.txt
         #echo $raw_size"MB "$root_size"MB"
     done
 done

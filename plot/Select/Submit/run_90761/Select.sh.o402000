@@ -1,0 +1,92 @@
+Initializing ECAL object...
+Layer Number: 15
+Chip Number: 16
+SCA Number: 15
+Channel Number: 64
+Map file: /home/llr/ilc/shi/code/TB_2025_3/script_yukun/plot/mapping/All_layers_mapping.txt
+Map X range -86.3 86.3
+Map Y range -86.3 86.3
+ECAL object initialized successfully!
+Found 1 ROOT files in /home/llr/ilc/shi/code/TB_2025_3/script_yukun/plot/Select/datalist/run_90761.txt
+Output branch Merge: adc_low
+Output branch Merge: adc_high
+Output branch Merge: hitbit_high
+Output branch Merge: hitbit_low
+Read /home/llr/ilc/shi/data/TB_2025_3/TB_Data/raw2root/TDC/siwecal_90761.root
+Entry 0 in 74992
+Entry 1000 in 74992
+Entry 2000 in 74992
+Entry 3000 in 74992
+Entry 4000 in 74992
+Entry 5000 in 74992
+Entry 6000 in 74992
+Entry 7000 in 74992
+Entry 8000 in 74992
+Entry 9000 in 74992
+Entry 10000 in 74992
+Entry 11000 in 74992
+Entry 12000 in 74992
+Entry 13000 in 74992
+Entry 14000 in 74992
+Entry 15000 in 74992
+Entry 16000 in 74992
+Entry 17000 in 74992
+Entry 18000 in 74992
+Entry 19000 in 74992
+Entry 20000 in 74992
+Entry 21000 in 74992
+Entry 22000 in 74992
+Entry 23000 in 74992
+Entry 24000 in 74992
+Entry 25000 in 74992
+Entry 26000 in 74992
+Entry 27000 in 74992
+Entry 28000 in 74992
+Entry 29000 in 74992
+Entry 30000 in 74992
+Entry 31000 in 74992
+Entry 32000 in 74992
+Entry 33000 in 74992
+Entry 34000 in 74992
+Entry 35000 in 74992
+Entry 36000 in 74992
+Entry 37000 in 74992
+Entry 38000 in 74992
+Entry 39000 in 74992
+Entry 40000 in 74992
+Entry 41000 in 74992
+Entry 42000 in 74992
+Entry 43000 in 74992
+Entry 44000 in 74992
+Entry 45000 in 74992
+Entry 46000 in 74992
+Entry 47000 in 74992
+Entry 48000 in 74992
+Entry 49000 in 74992
+Entry 50000 in 74992
+Entry 51000 in 74992
+Entry 52000 in 74992
+Entry 53000 in 74992
+Entry 54000 in 74992
+Entry 55000 in 74992
+Entry 56000 in 74992
+Entry 57000 in 74992
+Entry 58000 in 74992
+Entry 59000 in 74992
+Entry 60000 in 74992
+Entry 61000 in 74992
+Entry 62000 in 74992
+Entry 63000 in 74992
+Entry 64000 in 74992
+Entry 65000 in 74992
+Entry 66000 in 74992
+Entry 67000 in 74992
+Entry 68000 in 74992
+Entry 69000 in 74992
+Entry 70000 in 74992
+Entry 71000 in 74992
+Entry 72000 in 74992
+Entry 73000 in 74992
+Entry 74000 in 74992
+Read over /home/llr/ilc/shi/data/TB_2025_3/TB_Data/raw2root/TDC/siwecal_90761.root
+HitMap execution time: 838.346 seconds

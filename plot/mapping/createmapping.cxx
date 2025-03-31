@@ -10,15 +10,15 @@ int ReadMap(ifstream &f_map, float Pos_temp[Chip_No][Channel_No][3]){
     string str_buffer;
     getline(f_map,str_buffer);
     while (f_map >> chip >> x0 >> y0 >> channel >> x >> y) {
-        Pos_temp[chip][channel][0] = x;
-        Pos_temp[chip][channel][1] = y;
+        Pos_temp[chip][channel][0] = -x;
+        Pos_temp[chip][channel][1] = -y;
     }
     return 1;
 }
 
 int createmapping(){
     string mapping_name[2]={"fev10_chip_channel_x_y_mapping.txt","fev11_cob_rotate_chip_channel_x_y_mapping.txt"};
-    vector<int> mapping_layers[2]={{8},{11,12}};
+    vector<int> mapping_layers[2]={{11,12},{8}};
     string output_name = "All_layers_mapping.txt";
     ifstream f_map[2];
     float Pos[Layer_No][Chip_No][Channel_No][3];

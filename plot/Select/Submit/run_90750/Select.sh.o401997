@@ -1,0 +1,21 @@
+Initializing ECAL object...
+Layer Number: 15
+Chip Number: 16
+SCA Number: 15
+Channel Number: 64
+Map file: /home/llr/ilc/shi/code/TB_2025_3/script_yukun/plot/mapping/All_layers_mapping.txt
+Map X range -86.3 86.3
+Map Y range -86.3 86.3
+ECAL object initialized successfully!
+Found 1 ROOT files in /home/llr/ilc/shi/code/TB_2025_3/script_yukun/plot/Select/datalist/run_90750.txt
+Output branch Merge: adc_low
+Output branch Merge: adc_high
+Output branch Merge: hitbit_high
+Output branch Merge: hitbit_low
+Read /home/llr/ilc/shi/data/TB_2025_3/TB_Data/raw2root/TDC/siwecal_90750.root
+Entry 0 in 3494
+Entry 1000 in 3494
+Entry 2000 in 3494
+Entry 3000 in 3494
+Read over /home/llr/ilc/shi/data/TB_2025_3/TB_Data/raw2root/TDC/siwecal_90750.root
+HitMap execution time: 48.9237 seconds

@@ -7,6 +7,7 @@
 #include <fstream>
 #include <math.h>
 #include <vector>
+#include <map>
 #include <algorithm>
 #include <TH1F.h>
 #include <TH2F.h>
@@ -16,11 +17,8 @@
 #include <TCanvas.h>
 #include <TString.h>
 #include <iostream>
-#include <fstream>
-#include <sstream>
 #include <string>
 
-using namespace std;
 const int Layer_No = 15;
 const int Chip_No = 16;
 const int SCA_No = 15;
@@ -30,6 +28,8 @@ const float CellSize=5.5;
 
 class ECAL{
 private:
+    std::string treename_raw = "siwecaldecoded";
+    std::string treename_selected = "siwecalselected";
     int _bcid[Layer_No][Chip_No][SCA_No];
     int _corrected_bcid[Layer_No][Chip_No][SCA_No];
     int _badbcid[Layer_No][Chip_No][SCA_No];
@@ -48,7 +48,6 @@ private:
     int _slboard_id[Layer_No];
     int _n_slboards;
     int _acqNumber;
-  
     //slowcontrol
     double _startACQ[Layer_No];
     int _rawTSD[Layer_No];
@@ -57,20 +56,99 @@ private:
     int _rawAVDD1[Layer_No];
     float _AVDD0[Layer_No];
     float _AVDD1[Layer_No];
-
+    //Mapping
     float Pos[Layer_No][Chip_No][Channel_No][3];
     float RangeX[2], RangeY[2];
+    //IO vectors
+    std::vector<int> *_layer_ptr;
+    std::vector<int> *_chip_ptr;
+    std::vector<int> *_sca_ptr;
+    std::vector<int> *_channel_ptr;
+    std::vector<int> *_adc_low_ptr;
+    std::vector<int> *_adc_high_ptr;
+    std::vector<int> *_autogainbit_low_ptr;
+    std::vector<int> *_autogainbit_high_ptr;
+    std::vector<int> *_hitbit_high_ptr;
+    std::vector<int> *_hitbit_low_ptr;
+    std::map<std::string, std::vector<int>*> BranchMap_int_v;
+    std::map<std::string, int*> BranchMap_int;
 
+    std::vector<std::string> BranchNames_raw = {
+        "bcid",
+        "corrected_bcid",
+        "badbcid",
+        "adc_low",
+        "adc_high",
+        "autogainbit_low",
+        "autogainbit_high",
+        "hitbit_high",
+        "hitbit_low",
+    };
+    std::vector<std::string> BranchDesciptions_raw = {
+        "int",
+        "int",
+        "int",
+        "int",
+        "int",
+        "int",
+        "int",
+        "int",
+        "int",
+    };
+    std::vector<std::string> BranchNames_selected = {
+        "bcid",
+        "corrected_bcid",
+        "badbcid",
+        "adc_low",
+        "adc_high",
+        "autogainbit_low",
+        "autogainbit_high",
+        "hitbit_high",
+        "hitbit_low",
+    };
+    std::vector<std::string> BranchDesciptions_selected = {
+        "bcid[" + std::to_string(Layer_No) + "][" + std::to_string(Chip_No) + "][" + std::to_string(SCA_No) + "]/I",
+        "corrected_bcid[" + std::to_string(Layer_No) + "][" + std::to_string(Chip_No) + "][" + std::to_string(SCA_No) + "]/I",
+        "badbcid[" + std::to_string(Layer_No) + "][" + std::to_string(Chip_No) + "][" + std::to_string(SCA_No) + "]/I",
+        "vector<int>*",
+        "vector<int>*",
+        "vector<int>*",
+        "vector<int>*",
+        "vector<int>*",
+        "vector<int>*",
+    };    
 
+    std::vector<std::string> BranchNames_hitmap = {
+        "layer",
+        "chip",
+        "sca",
+        "channel",
+        "adc_low",
+        "adc_high",
+        "hitbit_high",
+        "hitbit_low",
+    };
+    std::vector<std::string> BranchDesciptions_hitmap = {
+        "vector<int>*",
+        "vector<int>*",
+        "vector<int>*",
+        "vector<int>*",
+        "vector<int>*",
+        "vector<int>*",
+        "vector<int>*",
+        "vector<int>*",
+    };  
 
 public:
-    ECAL(string Mapfile);
+    ECAL(std::string Mapfile);
     ~ECAL();
-    void Clear();
-    int ReadDatalist(string datalist, vector<string>&runs, vector<string>&rootFiles);
-    int ReadTree(TTree *tree);
-    int HitMap(string datalist, string output);
 
+    void Clear();
+    int ReadDatalist(std::string datalist, std::vector<std::string>& runs, std::vector<std::string>& rootFiles);
+    int ReadTree(TTree *tree, std::vector<std::string> BranchNames, std::vector<std::string> BranchDescriptors);
+    int WriteTree(TTree *tree, std::vector<std::string> BranchNames, std::vector<std::string> BranchDescriptors);
+    int HitMap(std::string datalist, std::string output);
+    int Select(std::string datalist, std::string output);
 };
 
 #endif

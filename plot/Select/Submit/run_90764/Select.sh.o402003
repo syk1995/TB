@@ -1,0 +1,105 @@
+Initializing ECAL object...
+Layer Number: 15
+Chip Number: 16
+SCA Number: 15
+Channel Number: 64
+Map file: /home/llr/ilc/shi/code/TB_2025_3/script_yukun/plot/mapping/All_layers_mapping.txt
+Map X range -86.3 86.3
+Map Y range -86.3 86.3
+ECAL object initialized successfully!
+Found 1 ROOT files in /home/llr/ilc/shi/code/TB_2025_3/script_yukun/plot/Select/datalist/run_90764.txt
+Output branch Merge: adc_low
+Output branch Merge: adc_high
+Output branch Merge: hitbit_high
+Output branch Merge: hitbit_low
+Read /home/llr/ilc/shi/data/TB_2025_3/TB_Data/raw2root/TDC/siwecal_90764.root
+Entry 0 in 87130
+Entry 1000 in 87130
+Entry 2000 in 87130
+Entry 3000 in 87130
+Entry 4000 in 87130
+Entry 5000 in 87130
+Entry 6000 in 87130
+Entry 7000 in 87130
+Entry 8000 in 87130
+Entry 9000 in 87130
+Entry 10000 in 87130
+Entry 11000 in 87130
+Entry 12000 in 87130
+Entry 13000 in 87130
+Entry 14000 in 87130
+Entry 15000 in 87130
+Entry 16000 in 87130
+Entry 17000 in 87130
+Entry 18000 in 87130
+Entry 19000 in 87130
+Entry 20000 in 87130
+Entry 21000 in 87130
+Entry 22000 in 87130
+Entry 23000 in 87130
+Entry 24000 in 87130
+Entry 25000 in 87130
+Entry 26000 in 87130
+Entry 27000 in 87130
+Entry 28000 in 87130
+Entry 29000 in 87130
+Entry 30000 in 87130
+Entry 31000 in 87130
+Entry 32000 in 87130
+Entry 33000 in 87130
+Entry 34000 in 87130
+Entry 35000 in 87130
+Entry 36000 in 87130
+Entry 37000 in 87130
+Entry 38000 in 87130
+Entry 39000 in 87130
+Entry 40000 in 87130
+Entry 41000 in 87130
+Entry 42000 in 87130
+Entry 43000 in 87130
+Entry 44000 in 87130
+Entry 45000 in 87130
+Entry 46000 in 87130
+Entry 47000 in 87130
+Entry 48000 in 87130
+Entry 49000 in 87130
+Entry 50000 in 87130
+Entry 51000 in 87130
+Entry 52000 in 87130
+Entry 53000 in 87130
+Entry 54000 in 87130
+Entry 55000 in 87130
+Entry 56000 in 87130
+Entry 57000 in 87130
+Entry 58000 in 87130
+Entry 59000 in 87130
+Entry 60000 in 87130
+Entry 61000 in 87130
+Entry 62000 in 87130
+Entry 63000 in 87130
+Entry 64000 in 87130
+Entry 65000 in 87130
+Entry 66000 in 87130
+Entry 67000 in 87130
+Entry 68000 in 87130
+Entry 69000 in 87130
+Entry 70000 in 87130
+Entry 71000 in 87130
+Entry 72000 in 87130
+Entry 73000 in 87130
+Entry 74000 in 87130
+Entry 75000 in 87130
+Entry 76000 in 87130
+Entry 77000 in 87130
+Entry 78000 in 87130
+Entry 79000 in 87130
+Entry 80000 in 87130
+Entry 81000 in 87130
+Entry 82000 in 87130
+Entry 83000 in 87130
+Entry 84000 in 87130
+Entry 85000 in 87130
+Entry 86000 in 87130
+Entry 87000 in 87130
+Read over /home/llr/ilc/shi/data/TB_2025_3/TB_Data/raw2root/TDC/siwecal_90764.root
+HitMap execution time: 1084.28 seconds
