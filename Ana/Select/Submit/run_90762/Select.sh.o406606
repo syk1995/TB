@@ -1,0 +1,10 @@
+Initializing ECAL object...
+Layer Number: 15
+Chip Number: 16
+SCA Number: 15
+Channel Number: 64
+Map file: /home/llr/ilc/shi/code/TB_2025_3/script_yukun/plot/mapping/All_layers_mapping.txt
+Map X range -86.3 86.3
+Map Y range -86.3 86.3
+ECAL object initialized successfully!
+HitMap execution time: 0.0354533 seconds

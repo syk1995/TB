@@ -1,0 +1,225 @@
+GCC version is already 13, no need to load.
+Initializing ECAL object...
+Layer Number: 15
+Chip Number: 16
+SCA Number: 15
+Channel Number: 64
+Map file: /home/llr/ilc/shi/code/TB_2025_3/script_yukun/Ana/mapping/All_layers_mapping.txt
+Map X range -86.3 86.3
+Map Y range -86.3 86.3
+ECAL object initialized successfully!
+Found 1 ROOT files in /home/llr/ilc/shi/code/TB_2025_3/script_yukun/Ana/TDC/datalist/run_90764.txt
+Read /data_ilc/flc/shi/TB_2025_3/TB_Data/selected_root/TDC/selected_90764.root
+Read branch:bcid
+Read branch:corrected_bcid
+Read branch:layer
+Read branch:chip
+Read branch:sca
+Read branch:channel
+Read branch:adc_low
+Read branch:adc_high
+Read branch:hitbit_high
+Read branch:hitbit_low
+Entry 0 in 83
+Layer 12 Chip 15 SCA 0 Channel 9corrected_bcid bcid 1885
+Layer 12 Chip 15 SCA 1 Channel 27corrected_bcid bcid 1889
+Layer 12 Chip 15 SCA 1 Channel 39corrected_bcid bcid 1889
+Layer 12 Chip 15 SCA 1 Channel 62corrected_bcid bcid 1889
+Layer 12 Chip 15 SCA 0 Channel 51corrected_bcid bcid 2740
+Layer 12 Chip 15 SCA 0 Channel 58corrected_bcid bcid 167
+Layer 8 Chip 1 SCA 0 Channel 28corrected_bcid bcid 304
+Layer 8 Chip 1 SCA 0 Channel 37corrected_bcid bcid 304
+Layer 11 Chip 12 SCA 0 Channel 19corrected_bcid bcid 174
+Layer 12 Chip 12 SCA 0 Channel 19corrected_bcid bcid 174
+Layer 12 Chip 12 SCA 1 Channel 7corrected_bcid bcid 218
+Layer 12 Chip 12 SCA 2 Channel 27corrected_bcid bcid 242
+Layer 11 Chip 5 SCA 0 Channel 39corrected_bcid bcid 271
+Layer 12 Chip 5 SCA 0 Channel 39corrected_bcid bcid 271
+Layer 11 Chip 5 SCA 2 Channel 53corrected_bcid bcid 286
+Layer 12 Chip 5 SCA 2 Channel 41corrected_bcid bcid 286
+Layer 11 Chip 3 SCA 0 Channel 16corrected_bcid bcid 540
+Layer 12 Chip 3 SCA 0 Channel 7corrected_bcid bcid 540
+Layer 12 Chip 5 SCA 3 Channel 60corrected_bcid bcid 540
+Layer 11 Chip 12 SCA 2 Channel 7corrected_bcid bcid 569
+Layer 12 Chip 12 SCA 3 Channel 29corrected_bcid bcid 569
+Layer 8 Chip 10 SCA 0 Channel 13corrected_bcid bcid 589
+Layer 11 Chip 12 SCA 3 Channel 28corrected_bcid bcid 589
+Layer 12 Chip 12 SCA 4 Channel 28corrected_bcid bcid 589
+Layer 11 Chip 12 SCA 4 Channel 43corrected_bcid bcid 603
+Layer 12 Chip 12 SCA 5 Channel 27corrected_bcid bcid 604
+Layer 11 Chip 3 SCA 1 Channel 19corrected_bcid bcid 677
+Layer 12 Chip 3 SCA 1 Channel 10corrected_bcid bcid 677
+Layer 11 Chip 12 SCA 6 Channel 16corrected_bcid bcid 789
+Layer 12 Chip 12 SCA 6 Channel 16corrected_bcid bcid 789
+Layer 11 Chip 5 SCA 3 Channel 50corrected_bcid bcid 799
+Layer 12 Chip 3 SCA 2 Channel 3corrected_bcid bcid 799
+Layer 11 Chip 3 SCA 2 Channel 9corrected_bcid bcid 926
+Layer 11 Chip 3 SCA 3 Channel 22corrected_bcid bcid 931
+Layer 12 Chip 3 SCA 3 Channel 13corrected_bcid bcid 931
+Layer 12 Chip 5 SCA 4 Channel 44corrected_bcid bcid 1009
+Layer 12 Chip 5 SCA 4 Channel 50corrected_bcid bcid 1009
+Layer 11 Chip 5 SCA 5 Channel 53corrected_bcid bcid 1160
+Layer 12 Chip 5 SCA 5 Channel 53corrected_bcid bcid 1161
+Layer 12 Chip 0 SCA 0 Channel 12corrected_bcid bcid 3345
+Layer 12 Chip 0 SCA 0 Channel 31corrected_bcid bcid 3345
+Layer 12 Chip 0 SCA 0 Channel 53corrected_bcid bcid 3345
+Layer 12 Chip 0 SCA 0 Channel 63corrected_bcid bcid 3345
+Layer 8 Chip 10 SCA 0 Channel 15corrected_bcid bcid 724
+Layer 12 Chip 0 SCA 0 Channel 45corrected_bcid bcid 723
+Layer 12 Chip 0 SCA 0 Channel 50corrected_bcid bcid 723
+Layer 11 Chip 10 SCA 0 Channel 60corrected_bcid bcid 1138
+Layer 12 Chip 8 SCA 0 Channel 3corrected_bcid bcid 1138
+Layer 12 Chip 8 SCA 0 Channel 12corrected_bcid bcid 1138
+Layer 12 Chip 8 SCA 0 Channel 14corrected_bcid bcid 1138
+Layer 12 Chip 8 SCA 0 Channel 15corrected_bcid bcid 1138
+Layer 12 Chip 8 SCA 0 Channel 19corrected_bcid bcid 1138
+Layer 12 Chip 8 SCA 0 Channel 23corrected_bcid bcid 1138
+Layer 12 Chip 8 SCA 0 Channel 24corrected_bcid bcid 1138
+Layer 12 Chip 8 SCA 0 Channel 34corrected_bcid bcid 1138
+Layer 12 Chip 8 SCA 0 Channel 37corrected_bcid bcid 1138
+Layer 12 Chip 8 SCA 0 Channel 52corrected_bcid bcid 1138
+Layer 12 Chip 8 SCA 0 Channel 53corrected_bcid bcid 1138
+Layer 12 Chip 8 SCA 0 Channel 54corrected_bcid bcid 1138
+Layer 12 Chip 8 SCA 0 Channel 57corrected_bcid bcid 1138
+Layer 12 Chip 8 SCA 0 Channel 61corrected_bcid bcid 1138
+Layer 12 Chip 8 SCA 1 Channel 4corrected_bcid bcid 1142
+Layer 12 Chip 8 SCA 1 Channel 6corrected_bcid bcid 1142
+Layer 12 Chip 8 SCA 1 Channel 22corrected_bcid bcid 1142
+Layer 12 Chip 8 SCA 1 Channel 31corrected_bcid bcid 1142
+Layer 12 Chip 8 SCA 1 Channel 36corrected_bcid bcid 1142
+Layer 12 Chip 8 SCA 1 Channel 51corrected_bcid bcid 1142
+Layer 12 Chip 8 SCA 1 Channel 59corrected_bcid bcid 1142
+Layer 12 Chip 8 SCA 1 Channel 60corrected_bcid bcid 1142
+Layer 11 Chip 3 SCA 0 Channel 4corrected_bcid bcid 1246
+Layer 12 Chip 3 SCA 0 Channel 18corrected_bcid bcid 1246
+Layer 11 Chip 10 SCA 1 Channel 45corrected_bcid bcid 1495
+Layer 12 Chip 10 SCA 0 Channel 39corrected_bcid bcid 1495
+Layer 11 Chip 3 SCA 1 Channel 22corrected_bcid bcid 1671
+Layer 12 Chip 3 SCA 1 Channel 7corrected_bcid bcid 1671
+Layer 11 Chip 10 SCA 2 Channel 44corrected_bcid bcid 2828
+Layer 12 Chip 10 SCA 1 Channel 38corrected_bcid bcid 2828
+Layer 12 Chip 10 SCA 1 Channel 45corrected_bcid bcid 2828
+Layer 8 Chip 1 SCA 0 Channel 15corrected_bcid bcid 3296
+Layer 11 Chip 5 SCA 0 Channel 27corrected_bcid bcid 3296
+Layer 12 Chip 5 SCA 0 Channel 33corrected_bcid bcid 3296
+Layer 12 Chip 12 SCA 0 Channel 31corrected_bcid bcid 3403
+Layer 11 Chip 10 SCA 3 Channel 26corrected_bcid bcid 3443
+Layer 12 Chip 10 SCA 2 Channel 44corrected_bcid bcid 3443
+Layer 11 Chip 12 SCA 1 Channel 31corrected_bcid bcid 4819
+Layer 12 Chip 12 SCA 1 Channel 19corrected_bcid bcid 4819
+Layer 12 Chip 12 SCA 1 Channel 28corrected_bcid bcid 4819
+Layer 11 Chip 5 SCA 1 Channel 32corrected_bcid bcid 4961
+Layer 12 Chip 5 SCA 1 Channel 53corrected_bcid bcid 4961
+Layer 11 Chip 5 SCA 2 Channel 41corrected_bcid bcid 5029
+Layer 12 Chip 5 SCA 2 Channel 41corrected_bcid bcid 5029
+Layer 11 Chip 5 SCA 3 Channel 25corrected_bcid bcid 5210
+Layer 12 Chip 5 SCA 3 Channel 41corrected_bcid bcid 5210
+Layer 12 Chip 5 SCA 3 Channel 50corrected_bcid bcid 5210
+Layer 12 Chip 5 SCA 4 Channel 25corrected_bcid bcid 5591
+Layer 11 Chip 12 SCA 2 Channel 25corrected_bcid bcid 5630
+Layer 11 Chip 12 SCA 3 Channel 9corrected_bcid bcid 6270
+Layer 12 Chip 12 SCA 4 Channel 32corrected_bcid bcid 6270
+Layer 12 Chip 12 SCA 4 Channel 35corrected_bcid bcid 6270
+Layer 12 Chip 12 SCA 4 Channel 41corrected_bcid bcid 6270
+Layer 11 Chip 5 SCA 4 Channel 38corrected_bcid bcid 7192
+Layer 12 Chip 5 SCA 5 Channel 47corrected_bcid bcid 7193
+Layer 12 Chip 12 SCA 5 Channel 7corrected_bcid bcid 7236
+Layer 11 Chip 5 SCA 0 Channel 3corrected_bcid bcid 33
+Layer 11 Chip 5 SCA 0 Channel 60corrected_bcid bcid 33
+Layer 12 Chip 5 SCA 0 Channel 35corrected_bcid bcid 33
+Layer 12 Chip 5 SCA 0 Channel 41corrected_bcid bcid 33
+Layer 11 Chip 5 SCA 1 Channel 48corrected_bcid bcid 38
+Layer 11 Chip 12 SCA 0 Channel 3corrected_bcid bcid 38
+Layer 11 Chip 12 SCA 0 Channel 33corrected_bcid bcid 38
+Layer 12 Chip 5 SCA 1 Channel 13corrected_bcid bcid 38
+Layer 12 Chip 5 SCA 1 Channel 60corrected_bcid bcid 38
+Layer 11 Chip 5 SCA 2 Channel 53corrected_bcid bcid 67
+Layer 11 Chip 10 SCA 0 Channel 41corrected_bcid bcid 67
+Layer 12 Chip 3 SCA 0 Channel 7corrected_bcid bcid 67
+Layer 12 Chip 5 SCA 2 Channel 48corrected_bcid bcid 67
+Layer 12 Chip 10 SCA 0 Channel 32corrected_bcid bcid 67
+Layer 12 Chip 10 SCA 0 Channel 33corrected_bcid bcid 67
+Layer 12 Chip 1 SCA 0 Channel 2corrected_bcid bcid 72
+Layer 12 Chip 1 SCA 0 Channel 24corrected_bcid bcid 72
+Layer 11 Chip 5 SCA 3 Channel 31corrected_bcid bcid 121
+Layer 11 Chip 5 SCA 4 Channel 54corrected_bcid bcid 140
+Layer 12 Chip 5 SCA 4 Channel 53corrected_bcid bcid 140
+Layer 11 Chip 5 SCA 5 Channel 28corrected_bcid bcid 170
+Layer 12 Chip 5 SCA 5 Channel 31corrected_bcid bcid 169
+Layer 11 Chip 5 SCA 6 Channel 22corrected_bcid bcid 184
+Layer 12 Chip 5 SCA 7 Channel 32corrected_bcid bcid 184
+Layer 12 Chip 10 SCA 1 Channel 47corrected_bcid bcid 184
+Layer 12 Chip 3 SCA 1 Channel 16corrected_bcid bcid 213
+Layer 11 Chip 12 SCA 2 Channel 33corrected_bcid bcid 223
+Layer 12 Chip 12 SCA 0 Channel 9corrected_bcid bcid 223
+Layer 12 Chip 12 SCA 0 Channel 27corrected_bcid bcid 223
+Layer 11 Chip 10 SCA 1 Channel 47corrected_bcid bcid 228
+Layer 12 Chip 10 SCA 2 Channel 53corrected_bcid bcid 228
+Layer 8 Chip 10 SCA 0 Channel 4corrected_bcid bcid 258
+Layer 11 Chip 12 SCA 3 Channel 21corrected_bcid bcid 257
+Layer 12 Chip 12 SCA 2 Channel 33corrected_bcid bcid 258
+Layer 11 Chip 5 SCA 7 Channel 45corrected_bcid bcid 272
+Layer 11 Chip 14 SCA 0 Channel 59corrected_bcid bcid 272
+Layer 12 Chip 5 SCA 8 Channel 22corrected_bcid bcid 272
+Layer 12 Chip 14 SCA 0 Channel 62corrected_bcid bcid 272
+Layer 11 Chip 12 SCA 5 Channel 11corrected_bcid bcid 277
+Layer 12 Chip 12 SCA 3 Channel 21corrected_bcid bcid 277
+Layer 12 Chip 5 SCA 9 Channel 45corrected_bcid bcid 287
+Layer 11 Chip 5 SCA 0 Channel 52corrected_bcid bcid 142
+Layer 12 Chip 5 SCA 0 Channel 52corrected_bcid bcid 142
+Layer 8 Chip 10 SCA 0 Channel 13corrected_bcid bcid 191
+Layer 11 Chip 12 SCA 0 Channel 52corrected_bcid bcid 191
+Layer 12 Chip 12 SCA 0 Channel 43corrected_bcid bcid 191
+Layer 11 Chip 5 SCA 1 Channel 27corrected_bcid bcid 201
+Layer 12 Chip 5 SCA 1 Channel 27corrected_bcid bcid 201
+Layer 11 Chip 8 SCA 0 Channel 4corrected_bcid bcid 274
+Layer 12 Chip 8 SCA 0 Channel 17corrected_bcid bcid 274
+Layer 11 Chip 10 SCA 0 Channel 39corrected_bcid bcid 362
+Layer 12 Chip 10 SCA 0 Channel 35corrected_bcid bcid 362
+Layer 12 Chip 10 SCA 0 Channel 54corrected_bcid bcid 362
+Layer 11 Chip 5 SCA 2 Channel 42corrected_bcid bcid 391
+Layer 12 Chip 5 SCA 2 Channel 42corrected_bcid bcid 391
+Layer 11 Chip 12 SCA 1 Channel 25corrected_bcid bcid 425
+Layer 12 Chip 12 SCA 1 Channel 19corrected_bcid bcid 425
+Layer 11 Chip 10 SCA 1 Channel 7corrected_bcid bcid 489
+Layer 12 Chip 10 SCA 1 Channel 7corrected_bcid bcid 489
+Layer 11 Chip 3 SCA 0 Channel 10corrected_bcid bcid 523
+Layer 11 Chip 6 SCA 0 Channel 3corrected_bcid bcid 523
+Layer 11 Chip 6 SCA 0 Channel 44corrected_bcid bcid 523
+Layer 12 Chip 3 SCA 0 Channel 10corrected_bcid bcid 523
+Layer 11 Chip 10 SCA 2 Channel 11corrected_bcid bcid 528
+Layer 12 Chip 10 SCA 2 Channel 17corrected_bcid bcid 528
+Layer 11 Chip 5 SCA 3 Channel 48corrected_bcid bcid 587
+Layer 11 Chip 12 SCA 2 Channel 28corrected_bcid bcid 587
+Layer 12 Chip 5 SCA 3 Channel 54corrected_bcid bcid 587
+Layer 12 Chip 12 SCA 2 Channel 28corrected_bcid bcid 587
+Layer 11 Chip 12 SCA 3 Channel 7corrected_bcid bcid 601
+Layer 12 Chip 12 SCA 3 Channel 7corrected_bcid bcid 601
+Layer 11 Chip 12 SCA 4 Channel 27corrected_bcid bcid 924
+Layer 12 Chip 12 SCA 4 Channel 27corrected_bcid bcid 924
+Layer 11 Chip 3 SCA 1 Channel 63corrected_bcid bcid 1124
+Layer 12 Chip 3 SCA 1 Channel 57corrected_bcid bcid 1124
+Layer 12 Chip 3 SCA 1 Channel 63corrected_bcid bcid 1124
+Layer 11 Chip 5 SCA 4 Channel 25corrected_bcid bcid 1143
+Layer 12 Chip 5 SCA 4 Channel 25corrected_bcid bcid 1143
+Layer 11 Chip 5 SCA 5 Channel 39corrected_bcid bcid 1207
+Layer 12 Chip 5 SCA 5 Channel 39corrected_bcid bcid 1207
+Layer 12 Chip 15 SCA 0 Channel 60corrected_bcid bcid 2900
+Read over /data_ilc/flc/shi/TB_2025_3/TB_Data/selected_root/TDC/selected_90764.root
+OBJ: TStyle	cdrStyle	CDR Style : 0 at: 0x51be720
+Layer 0 Chip 1 Channel 1 Statistics 0 0
+Layer 1 Chip 1 Channel 1 Statistics 0 0
+Layer 2 Chip 1 Channel 1 Statistics 0 0
+Layer 3 Chip 1 Channel 1 Statistics 0 0
+Layer 4 Chip 1 Channel 1 Statistics 0 0
+Layer 5 Chip 1 Channel 1 Statistics 0 0
+Layer 6 Chip 1 Channel 1 Statistics 0 0
+Layer 7 Chip 1 Channel 1 Statistics 0 0
+Layer 8 Chip 11 Channel 14 Statistics 2 0
+Layer 9 Chip 1 Channel 1 Statistics 0 0
+Layer 10 Chip 1 Channel 1 Statistics 0 0
+Layer 11 Chip 6 Channel 54 Statistics 3 1
+Layer 12 Chip 13 Channel 28 Statistics 4 1
+Layer 13 Chip 1 Channel 1 Statistics 0 0
+Layer 14 Chip 1 Channel 1 Statistics 0 0
+HitMap execution time: 1.22994 seconds
