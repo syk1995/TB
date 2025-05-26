@@ -88,7 +88,7 @@ int ECAL::Select(string datalist, string output){
     }
     TTree *tree_out = new TTree(treename_selected.c_str(),("Select from "+treename_raw).c_str());
     WriteTree(tree_out,BranchNames_selected,BranchDesciptions_selected);
-    WriteTree(tree_out,BranchNames_hitmap,BranchDesciptions_hitmap);
+    WriteTree(tree_out,BranchNames_hitmap,BranchDesciptions_hitmap);//BranchNames_selected includes the names in Branchnames_hitmap, so this line not needed but keep it for now
     #pragma endregion
 
     //Loop over ROOT files
@@ -107,7 +107,7 @@ int ECAL::Select(string datalist, string output){
             continue;
         }
         ReadTree(tree_in,BranchNames_raw,BranchDesciptions_raw);
-        for(int i_entry = 0; i_entry < tree_in->GetEntries() && i_entry<1000000; i_entry++){
+        for(int i_entry = 0; i_entry < tree_in->GetEntries() && i_entry<10; i_entry++){
             if(i_entry%1000==0)cout<<"Entry "<<i_entry<<" in "<<tree_in->GetEntries()<<endl;
             //Clear variables
             #pragma region
@@ -120,12 +120,13 @@ int ECAL::Select(string datalist, string output){
                 for(int i_chip = 0; i_chip < Chip_No; i_chip++){
                     for(int i_sca = 0; i_sca < SCA_No; i_sca++){
                         if(_badbcid[i_layer][i_chip][i_sca] != 0) continue;
+                        cout<<"acqNumber "<<_acqNumber<<" bcid "<<_bcid[i_layer][i_chip][i_sca]<<" corrected_bcid "<<_corrected_bcid[i_layer][i_chip][i_sca]<<" layer "<<i_layer<<" chip "<<i_chip<<" sca "<<i_sca<<endl;
                         if(i_sca>0){
                             if(_bcid[i_layer][i_chip][i_sca] < _bcid[i_layer][i_chip][i_sca-1]){
                                 bcid_loop[i_layer][i_chip]++;
                             }    
                         }
-                        _corrected_bcid[i_layer][i_chip][i_sca] = _bcid[i_layer][i_chip][i_sca]+bcid_loop[i_layer][i_chip]*4096;
+                        _corrected_bcid[i_layer][i_chip][i_sca] = _bcid[i_layer][i_chip][i_sca] + bcid_loop[i_layer][i_chip]*4096;
                         b_empty = true;                        
                         for(int i_channel = 0; i_channel < Channel_No; i_channel++){
                             if(find(maskchannel.begin(), maskchannel.end(), i_layer*10000+i_chip*100+i_sca) != maskchannel.end())continue;
@@ -137,7 +138,7 @@ int ECAL::Select(string datalist, string output){
                         if(b_empty){
                             for(int i_channel = 0; i_channel < Channel_No; i_channel++){
                                 h_emptyEve_Map[i_layer][0]->Fill(i_chip,i_channel);
-                                h_emptyEve_Map[i_layer][1]->Fill(Pos[i_layer][i_chip][i_channel][0],Pos[i_layer][i_chip][i_channel][1]);
+                                h_emptyEve_Map[i_layer][1]->Fill(_Pos[i_layer][i_chip][i_channel][0],_Pos[i_layer][i_chip][i_channel][1]);
                                 if(find(maskchannel.begin(), maskchannel.end(), i_layer*10000+i_chip*100+i_sca) != maskchannel.end())continue;
                                 h_emptyEve_adc[i_layer][0]->Fill(_adc_low[i_layer][i_chip][i_sca][i_channel]);
                                 h_emptyEve_adc[i_layer][1]->Fill(_adc_high[i_layer][i_chip][i_sca][i_channel]);
@@ -148,8 +149,8 @@ int ECAL::Select(string datalist, string output){
                             h_emptyEve_bcid_sca[i_layer]->Fill(_corrected_bcid[i_layer][i_chip][i_sca], i_sca);
                             continue;
                         }     
-                        if(_bcid[i_layer][i_chip][i_sca] + bcid_loop[i_layer][i_chip]*4096 <bcid_min){
-                            bcid_min = _bcid[i_layer][i_chip][i_sca] + bcid_loop[i_layer][i_chip]*4096;
+                        if(_corrected_bcid[i_layer][i_chip][i_sca] <bcid_min){
+                            bcid_min = _corrected_bcid[i_layer][i_chip][i_sca];
                         }    
                         bcid_map[_corrected_bcid[i_layer][i_chip][i_sca]].push_back(i_layer*10000+i_chip*100+i_sca);
                     }

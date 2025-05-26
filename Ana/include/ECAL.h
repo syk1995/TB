@@ -28,10 +28,11 @@ const int BCID_No = 4096;
 const float CellSize=5.5;
 
 class ECAL{
-private:
+protected:
     std::string str_buffer;
     std::string treename_raw = "siwecaldecoded";
     std::string treename_selected = "siwecalselected";
+    std::string treename_TDC = "ECAL_TDCEvents";
     int _bcid[Layer_No][Chip_No][SCA_No];
     int _corrected_bcid[Layer_No][Chip_No][SCA_No];
     int _badbcid[Layer_No][Chip_No][SCA_No];
@@ -59,11 +60,12 @@ private:
     float _AVDD0[Layer_No];
     float _AVDD1[Layer_No];
     //Mapping
-    float Pos[Layer_No][Chip_No][Channel_No][3];
+    float _Pos[Layer_No][Chip_No][Channel_No][3];
     float RangeX[2], RangeY[2];
     //Mask
     std::vector<int> _mask_channels;
-    
+    //TDC Calibration Constant, its unit is TDC/ns
+    double _TCC[Layer_No][Chip_No][SCA_No][Channel_No];
     //IO vectors
     std::vector<int> *_layer_ptr;
     std::vector<int> *_chip_ptr;
@@ -79,6 +81,7 @@ private:
     std::map<std::string, int*> BranchMap_int;
 
     std::vector<std::string> BranchNames_raw = {
+        "acqNumber",
         "bcid",
         "corrected_bcid",
         "badbcid",
@@ -99,8 +102,10 @@ private:
         "int",
         "int",
         "int",
+        "int",
     };
     std::vector<std::string> BranchNames_selected = {
+        "acqNumber",
         "bcid",
         "corrected_bcid",
         "badbcid",
@@ -110,8 +115,13 @@ private:
         "autogainbit_high",
         "hitbit_high",
         "hitbit_low",
+        "layer",
+        "chip",
+        "sca",
+        "channel",
     };
     std::vector<std::string> BranchDesciptions_selected = {
+        "acqNumber/I",
         "bcid[" + std::to_string(Layer_No) + "][" + std::to_string(Chip_No) + "][" + std::to_string(SCA_No) + "]/I",
         "corrected_bcid[" + std::to_string(Layer_No) + "][" + std::to_string(Chip_No) + "][" + std::to_string(SCA_No) + "]/I",
         "badbcid[" + std::to_string(Layer_No) + "][" + std::to_string(Chip_No) + "][" + std::to_string(SCA_No) + "]/I",
@@ -121,9 +131,14 @@ private:
         "vector<int>*",
         "vector<int>*",
         "vector<int>*",
+        "vector<int>*",
+        "vector<int>*",
+        "vector<int>*",
+        "vector<int>*",
     };    
 
     std::vector<std::string> BranchNames_hitmap = {
+        "acqNumber",
         "bcid",
         "corrected_bcid",
         "layer",
@@ -136,6 +151,7 @@ private:
         "hitbit_low",
     };
     std::vector<std::string> BranchDesciptions_hitmap = {
+        "acqNumber/I",
         "bcid[" + std::to_string(Layer_No) + "][" + std::to_string(Chip_No) + "][" + std::to_string(SCA_No) + "]/I",
         "corrected_bcid[" + std::to_string(Layer_No) + "][" + std::to_string(Chip_No) + "][" + std::to_string(SCA_No) + "]/I",
         "vector<int>*",
@@ -148,6 +164,35 @@ private:
         "vector<int>*",
     };  
 
+    std::vector<std::string> BranchNames_TDC = {
+        "acqNumber",
+        "corrected_bcid",
+        "layer",
+        "chip",
+        "sca",
+        "channel",
+        "adc_low",
+        "adc_high",
+        "hitbit_high",
+        "hitbit_low",
+        "BIF_bcid",
+        "BIF_TDC",
+    };
+    std::vector<std::string> BranchDesciptions_TDC = {
+        "acqNumber/I",
+        "corrected_bcid[" + std::to_string(Layer_No) + "][" + std::to_string(Chip_No) + "][" + std::to_string(SCA_No) + "]/I",
+        "vector<int>*",
+        "vector<int>*",
+        "vector<int>*",
+        "vector<int>*",
+        "vector<int>*",
+        "vector<int>*",
+        "vector<int>*",
+        "vector<int>*",
+        "BIF_bcid/I",
+        "BIF_TDC/I",
+    };  
+
 public:
     ECAL(std::string Mapfile,std::string Maskfile="");
     ~ECAL();
@@ -158,6 +203,7 @@ public:
     int WriteTree(TTree *tree, std::vector<std::string> BranchNames, std::vector<std::string> BranchDescriptors);
     int HitMap(std::string datalist, std::string output);
     int Select(std::string datalist, std::string output);
+    int TDC_Calib(std::string datalist, std::string output);
     int TDC(std::string datalist, std::string output);
 };
 

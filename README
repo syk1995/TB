@@ -5,3 +5,14 @@ More Info
 https://bead-confidence-3ce.notion.site/2025-03-TB-Desy-1a782dd2955e8052a3dae5d77f43d21e
 
 Contact：Yukun Shi，shi@llr.in2p3.fr
+
+1.conversion: convert raw/slcio files into root
+    a)raw to root: See raw2root.sh, Convert.cc, SLBraw2ROOT.cc are needed
+    b)slcio to root: unfinished
+    c)BIF: Only get and store BIF information
+2.Ana
+    b)PositionScan: draw hit map from roots converted by 1.
+    c)Select: Build and select events
+    d)Calib: need roots from 2.c, Calib the TDC in ns
+    e)TDC: need root file from 2.f, analyze the TDC info
+    f)BIF: need root file from 2.c and 1.c, Build events with ECAL and BIF

@@ -4,11 +4,13 @@
 #                                           #
 #############################################
 
-GENERAL=ECAL
+ECAL=ECAL
+BIF=BIF
 PLOT=cepcplotstyle
 TARGET1=Select
 TARGET2=HitMap
 TARGET3=TDC
+TARGET4=TDC_Calib
 
 ##set up control#######
 TOP:= $(shell pwd)
@@ -30,23 +32,29 @@ DIR_INCLUDE+=$(ROOTCFLAGS)
 
 # #set up compilers#
 CXX = g++
-CPPFLAGS = -g -Wall -I$(DIR_INCLUDE) -I$(PLOT_INCLUDE)
+CPPFLAGS = -g -Wall -I$(DIR_INCLUDE) -I$(PLOT_INCLUDE) 
 
 ####### Make Execuatbles#######
-all: $(TARGET1) $(TARGET2) $(TARGET3)
+all: $(TARGET1) $(TARGET2) $(TARGET3) $(TARGET4) $(BIF)
 
 $(DIR_OBJ)/%.o:$(DIR_SRC)/%.cxx  
 	$(CXX) $(CPPFLAGS)  -c $(DIR_SRC)/$(notdir $<)  -o $(DIR_OBJ)/$(notdir $@)
 $(DIR_OBJ)/$(PLOT).o: $(PLOT_SRC)
 	$(CXX) $(CPPFLAGS) -c $< -o $@
 
-$(TARGET1): $(DIR_OBJ)/$(GENERAL).o $(DIR_OBJ)/$(TARGET1).o $(DIR_OBJ)/$(PLOT).o
+$(TARGET1): $(DIR_OBJ)/$(ECAL).o $(DIR_OBJ)/$(TARGET1).o $(DIR_OBJ)/$(PLOT).o
 	$(CXX) $^ $(CPPLIBS) -o $(DIR_BIN)/$(notdir $@)	
 
-$(TARGET2): $(DIR_OBJ)/$(GENERAL).o $(DIR_OBJ)/$(TARGET2).o $(DIR_OBJ)/$(PLOT).o
+$(TARGET2): $(DIR_OBJ)/$(ECAL).o $(DIR_OBJ)/$(TARGET2).o $(DIR_OBJ)/$(PLOT).o
 	$(CXX) $^ $(CPPLIBS) -o $(DIR_BIN)/$(notdir $@)
 
-$(TARGET3): $(DIR_OBJ)/$(GENERAL).o $(DIR_OBJ)/$(TARGET3).o $(DIR_OBJ)/$(PLOT).o
+$(TARGET3): $(DIR_OBJ)/$(ECAL).o $(DIR_OBJ)/$(TARGET3).o $(DIR_OBJ)/$(PLOT).o
+	$(CXX) $^ $(CPPLIBS) -o $(DIR_BIN)/$(notdir $@)
+
+$(TARGET4): $(DIR_OBJ)/$(ECAL).o $(DIR_OBJ)/$(TARGET4).o $(DIR_OBJ)/$(PLOT).o
+	$(CXX) $^ $(CPPLIBS) -o $(DIR_BIN)/$(notdir $@)
+
+$(BIF): $(DIR_OBJ)/$(ECAL).o $(DIR_OBJ)/$(BIF).o $(DIR_OBJ)/$(PLOT).o	
 	$(CXX) $^ $(CPPLIBS) -o $(DIR_BIN)/$(notdir $@)
 
 .PHONY:clean

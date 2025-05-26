@@ -29,58 +29,31 @@ int ECAL::TDC(string datalist, string output){
         return 0;
     }
     //init_histograms
-    h_layer_hitnum = new TH2F("h_layer_hitnum","Layer Hit Number",Layer_No,0,Layer_No,31,-1,30);
-    FormatData(h_layer_hitnum,"Layer","Hit Number","Number of hits",1.1,1.1,1.1);
-    
-    for(int i_layer = 0; i_layer < Layer_No; i_layer++){
+    h2_TDC_2channel = new TH2F("h_TDC_2channel","h_TDC_2channel",4096,0,4096,4096,0,4096);
+    FormatData(h2_TDC_2channel,"TDC channel 1","TDC channel 2","Number of hits",1.1,1.1,1.1);
+
+    for(int i_layer=0; i_layer<Layer_No; i_layer++){
         Evt_num[i_layer]=0;
         
-        hist_name = Form("h_pedestal_layer%d",i_layer);
-        h_pedestal[i_layer] = new TH1F(hist_name.c_str(),hist_name.c_str(),5000,0,5000);
-        FormatData(h_pedestal[i_layer],"Pedestal [ADC]","Number of hits",1.1,1.1);
+        hist_name = Form("h_pedestal_low_layer%d",i_layer);
+        h_pedestal[i_layer][0] = new TH1F(hist_name.c_str(),hist_name.c_str(),5000,0,5000);
+        FormatData(h_pedestal[i_layer][0],"Low gain output [ADC]","Number of hits",1.1,1.1);
 
-        hist_name = Form("h_bcid_layer%d",i_layer);
-        h_bcid[i_layer] = new TH1F(hist_name.c_str(),hist_name.c_str(),5000,0,5000);
-        FormatData(h_bcid[i_layer],"BCID","Number of events",1.1,1.1);
-
-        hist_name = Form("h_ADC_all_layer%d",i_layer);
-        h_ADC[i_layer][0] = new TH1F(hist_name.c_str(),hist_name.c_str(),5000,0,5000);
-        FormatData(h_ADC[i_layer][0],"ADC [ADC]","Number of hits",1.1,1.1);
-
-        hist_name = Form("h_ADC_layer%d",i_layer);
-        h_ADC[i_layer][1] = new TH1F(hist_name.c_str(),hist_name.c_str(),5000,0,5000);
-        FormatData(h_ADC[i_layer][1],"ADC [ADC]","Number of hits",1.1,1.1);
-
-        hist_name = Form("h_hitnum_layer%d",i_layer);
-        h_hitnum[i_layer] = new TH1F(hist_name.c_str(),hist_name.c_str(),100,0,100);
-        FormatData(h_hitnum[i_layer],"Hit Number","Number of hits",1.1,1.1);
-
-        hist_name = Form("h_TDC_layer%d_BFSelection",i_layer);
-        h_TDC[i_layer][0] = new TH1F(hist_name.c_str(),hist_name.c_str(),5000,0,5000);
-        FormatData(h_TDC[i_layer][0],"Output [TDC]","Number of hits",1.1,1.1);
-
-        hist_name = Form("h_TDC_layer%d_AFSelection",i_layer);
-        h_TDC[i_layer][1] = new TH1F(hist_name.c_str(),hist_name.c_str(),5000,0,5000);
-        FormatData(h_TDC[i_layer][1],"Output [TDC]","Number of hits",1.1,1.1);
-   
-        hist_name = Form("h_TDC_ref_layer%d",i_layer);
-        h_TDC_ref[i_layer] = new TH1F(hist_name.c_str(),hist_name.c_str(),10000,-5000,5000);
-        FormatData(h_TDC_ref[i_layer],"Output [TDC]","Number of hits",1.1,1.1);
+        hist_name = Form("h_pedestal_high_layer%d",i_layer);
+        h_pedestal[i_layer][1] = new TH1F(hist_name.c_str(),hist_name.c_str(),5000,0,5000);
+        FormatData(h_pedestal[i_layer][1],"High gain output [TDC]","Number of hits",1.1,1.1);
+  
+        hist_name = Form("h_BIF_TDC_layer%d",i_layer);
+        h_BIF_TDC[i_layer] = new TH2F(hist_name.c_str(),hist_name.c_str(),256,0,256,5000,0,5000);
+        FormatData(h_BIF_TDC[i_layer],"BIF TDC","SPIROC TDC","Number of hits",1.1,1.1,1.1);
 
         hist_name = Form("HitMap_high_Chip_Channel_layer%d",i_layer);
-        hitmap_high[i_layer][0] = new TH2F(hist_name.c_str(),hist_name.c_str(),Chip_No,0,Chip_No,Channel_No,0,Channel_No);
+        hitmap_high[i_layer][0] = new TH2F(hist_name.c_str(),hist_name.c_str(),Chip_No,-0.5,Chip_No-0.5,Channel_No,-0.5,Channel_No-0.5);
         FormatData(hitmap_high[i_layer][0],"Chip","Channel","Number of hits",1.1,1.1,1.1);
 
         hist_name = Form("HitMap_high_XY_layer%d",i_layer);
         hitmap_high[i_layer][1] = new TH2F(hist_name.c_str(),hist_name.c_str(),Cell_No,RangeX[0]-CellSize/2.,RangeX[1]+CellSize/2.,Cell_No,RangeY[0]-CellSize/2.,RangeY[1]+CellSize/2);
         FormatData(hitmap_high[i_layer][1],"X [mm]","Y [mm]","Number of hits",1.1,1.1,1.1);
-
-        hist_name = Form("h_TDC_E_layer%d",i_layer);
-        h_TDC_E[i_layer][0] = new TH2F(hist_name.c_str(),hist_name.c_str(),10000,-5000,5000,5000,0,5000);
-        FormatData(h_TDC_E[i_layer][0],"Output [TDC]","Energy depostion [ADC]","Number of hits",1.1,1.1,1.1);
-        hist_name = Form("h_TDC_E_ref_layer%d",i_layer);
-        h_TDC_E[i_layer][1] = new TH2F(hist_name.c_str(),hist_name.c_str(),10000,-5000,5000,5000,0,5000);
-        FormatData(h_TDC_E[i_layer][1],"TDC_ref [TDC]","Energy depostion [ADC]","Number of hits",1.1,1.1,1.1);
     }
     #pragma endregion
 
@@ -93,21 +66,18 @@ int ECAL::TDC(string datalist, string output){
             cerr << "Error: Cannot open ROOT file: " << rootFile << endl;
             continue;
         }
-        TTree *tree = (TTree*)fin->Get(treename_selected.c_str());
+        TTree *tree = (TTree*)fin->Get(treename_TDC.c_str());
         if (!tree) {
             cerr << "Error: Cannot find TTree "<<treename_selected <<" in " << rootFile << endl;
             fin->Close();
             continue;
         }
-        ReadTree(tree,BranchNames_hitmap,BranchDesciptions_hitmap);
-        for(int i_entry = 0; i_entry < tree->GetEntries() && i_entry<10000; i_entry++){
+        ReadTree(tree,BranchNames_TDC,BranchDesciptions_TDC);
+        for(int i_entry = 0; i_entry < tree->GetEntries() && i_entry<Read_EventNum; i_entry++){
             if(i_entry%1000==0)cout<<"Entry "<<i_entry<<" in "<<tree->GetEntries()<<endl;
             Clear();
             TDC_Clear();
-            b_MIP = true;
-            bool b_hit=false;
-            tree->GetEntry(i_entry);               
-            //Fill histograms
+            tree->GetEntry(i_entry);              
             for(int i_hit=0; i_hit<_hitbit_high_ptr->size(); i_hit++){
                 hitbit_high=_hitbit_high_ptr->at(i_hit);
                 hitbit_low=_hitbit_low_ptr->at(i_hit);
@@ -117,61 +87,31 @@ int ECAL::TDC(string datalist, string output){
                 channel=_channel_ptr->at(i_hit);
                 adc_high=_adc_high_ptr->at(i_hit);
                 adc_low=_adc_low_ptr->at(i_hit);
-                X = Pos[layer][chip][channel][0];
-                Y = Pos[layer][chip][channel][1];
-                Z = Pos[layer][chip][channel][2];
-                if(hitbit_high!=hitbit_low){
-                    cout<<"Abnormal Hitbit Hitbit high: "<<hitbit_high<<" Hitbit low: "<<hitbit_low<<" "<<_layer_ptr->at(i_hit)<<" "<<_chip_ptr->at(i_hit)<<" "<<_sca_ptr->at(i_hit)<<" "<<_channel_ptr->at(i_hit)<<endl;
-                }
-                if(hitbit_high>0){
-                    if(layer!=8 && layer!=11 && layer!=12){cout<<"Abnormal layer "<<layer<<" chip "<<chip<<" channel "<<channel<<endl;}
-                    hitmap_high[layer][0]->Fill(chip,channel);
-                    hitmap_high[layer][1]->Fill(X,Y);
-                    h_bcid[layer]->Fill(_bcid[layer][chip][sca]);
-                    b_hit=true;
-                }
-                int ID = layer*10000+chip*100+channel;
-                if(find(ID_select.begin(), ID_select.end(), ID) == ID_select.end())continue;
+                X = _Pos[layer][chip][channel][0];
+                Y = _Pos[layer][chip][channel][1];
+                Z = _Pos[layer][chip][channel][2];
+                HitID = layer*10000+chip*100+channel;
                 if(hitbit_high==0){
-                    h_pedestal[layer]->Fill(adc_low);
+                    h_pedestal[layer][0]->Fill(adc_low);
+                    h_pedestal[layer][1]->Fill(adc_high);
+                    if(find(selected_ID.begin(), selected_ID.end(), HitID) != selected_ID.end()){
+                        hit_vec.push_back({X,Y,Z,adc_high,adc_low,_corrected_bcid[layer][chip][sca],sca,layer*10000+chip*100+channel});
+                    }
+                    continue;
+                }
+                if(bcid_cur==-1)bcid_cur = _bcid[layer][chip][sca];
+                if(fabs(_bcid[layer][chip][sca] - bcid_cur)>1){
+                    cout<<"Mis matched bcid in entry "<<i_entry<<" "<<_bcid[layer][chip][sca]<<" "<<bcid_cur<<" layer "<<layer<<" chip "<<chip<<" sca "<<sca<<endl;
                     continue;
                 }
                 Evt_num[layer]++;
-                h_TDC[layer][0]->Fill(adc_high);
-                TDC_layer[layer][0] = X;
-                TDC_layer[layer][1] = Y;
-                TDC_layer[layer][2] = Z;
-                TDC_layer[layer][3] = adc_high;
-                TDC_layer[layer][4] = adc_low;
-                TDC_layer[layer][5] = _bcid[layer][chip][sca];
+                hitmap_high[layer][0]->Fill(chip,channel);
+                hitmap_high[layer][1]->Fill(X,Y);
             }
-            //Use the selected channel
-            if(!b_hit)cout<<"No hit in this event "<<i_entry<<endl;
-            bool b_event = true;
-            int bcid_cur;
-            for(int i=0; i<ID_select.size(); i++){
-                int ID = ID_select[i];
-                layer = ID/10000;
-                chip = (ID%10000)/100;
-                channel = ID%100;
-                if(TDC_layer[layer][3]==-1){
-                    b_event = false;
-                    break;
+            if(hit_vec.size()==2){
+                for(int i_hit=0; i_hit<hit_vec.size(); i_hit++){
+                    h2_TDC_2channel->Fill(hit_vec[i_hit].ADC,hit_vec[1-i_hit].ADC);
                 }
-                if(i==0) bcid_cur = TDC_layer[layer][5];
-                if(TDC_layer[layer][5]!=bcid_cur){
-                    b_event = false;
-                    break;
-                }
-            }
-            if(!b_event)continue;
-            TDC_ref = TDC_layer[11][3]; 
-            for(int i_layer=0; i_layer<Layer_No; i_layer++){
-                if(TDC_layer[i_layer][3]==-1)continue;
-                h_TDC[i_layer][1]->Fill(TDC_layer[i_layer][3]);
-                h_TDC_ref[i_layer]->Fill(TDC_layer[i_layer][3]-TDC_ref);
-                h_TDC_E[i_layer][0]->Fill(TDC_layer[i_layer][3],TDC_layer[i_layer][4]);
-                h_TDC_E[i_layer][1]->Fill(TDC_layer[i_layer][3]-TDC_ref,TDC_layer[i_layer][4]);
             }
         }
         fin->Close();
@@ -189,26 +129,29 @@ int ECAL::TDC(string datalist, string output){
     rootlogon();
     gROOT->SetBatch(kTRUE);
     
-    h_layer_hitnum->Write();
-    for(int i_layer = 0; i_layer < Layer_No; i_layer++){
+    hist_name = "C_h2_TDC_2channel";
+    TCanvas *c_h2_TDC_2channel = new TCanvas(hist_name.c_str(),hist_name.c_str(), 800, 600);
+    h2_TDC_2channel->Draw("colz");
+    c_h2_TDC_2channel->Write();
+    delete c_h2_TDC_2channel;
+
+    for(int i=0; i<selected_layers.size(); i++){
+        int i_layer = selected_layers[i];
         fout->cd();
         fout->mkdir(Form("Layer_%d",i_layer));
         fout->cd(Form("Layer_%d",i_layer));
 
-        h_pedestal[i_layer]->Write();
-        h_bcid[i_layer]->Write();
-        h_TDC[i_layer][0]->Write();
-        h_TDC[i_layer][1]->Write();
+        h_pedestal[i_layer][0]->Write();
+        h_pedestal[i_layer][1]->Write();
 
-        hist_name = Form("h_TDC_ref_layer%d",i_layer);
-        TCanvas *c_TDC_ref = new TCanvas(hist_name.c_str());
-        h_TDC_ref[i_layer]->Write();
-        h_TDC_ref[i_layer]->Draw();
-        c_TDC_ref->Write();
-        delete c_TDC_ref;
+        hist_name = Form("C_BIF_TDC_layer%d",i_layer);
+        TCanvas *c_BIF_TDC = new TCanvas(hist_name.c_str(),hist_name.c_str(), 800, 600);
+        h_BIF_TDC[i_layer]->Draw("colz");
+        c_BIF_TDC->Write();
+        delete c_BIF_TDC;
 
         hist_name = Form("C_HitMap_high_Chip_Channel_layer%d",i_layer);
-        TCanvas *c_hitmap_chip = new TCanvas(hist_name.c_str());
+        TCanvas *c_hitmap_chip = new TCanvas(hist_name.c_str(),hist_name.c_str(), 800, 600);
         //hitmap_high[i_layer][0]->Write();
         hitmap_high[i_layer][0]->Draw("colz");
         c_hitmap_chip->Write();
@@ -218,13 +161,12 @@ int ECAL::TDC(string datalist, string output){
         cout<<"Layer "<<i_layer<<" Chip "<<binx<<" Channel "<<biny<<" Statistics "<<hitmap_high[i_layer][0]->GetBinContent(binx,biny)<<" "<<Evt_num[i_layer]<<endl;
 
         hist_name = Form("C_HitMap_high_XY_layer%d",i_layer);
-        TCanvas *c_hitmap_xy = new TCanvas(hist_name.c_str());
+        TCanvas *c_hitmap_xy = new TCanvas(hist_name.c_str(),hist_name.c_str(), 800, 600);
         //hitmap_high[i_layer][1]->Write();
         hitmap_high[i_layer][1]->Draw("colz");
         //c_hitmap_xy->Print(pdfFileName.c_str());
         c_hitmap_xy->Write();
         delete c_hitmap_xy;
-
     }
     c->Print((pdfFileName + "]").c_str());
     fout->Close();

@@ -33,6 +33,7 @@ ECAL::ECAL(string Mapfile, string Maskfile){
                     _autogainbit_high[i_layer][i_chip][i_sca][i_channel]=0;
                     _hitbit_low[i_layer][i_chip][i_sca][i_channel]=0;
                     _hitbit_high[i_layer][i_chip][i_sca][i_channel]=0;
+                    _TCC[i_layer][i_chip][i_sca][i_channel] = 0;
                 }
             }
         }
@@ -57,6 +58,7 @@ ECAL::ECAL(string Mapfile, string Maskfile){
     BranchMap_int_v["autogainbit_high"] = _autogainbit_high_ptr;
     BranchMap_int_v["hitbit_high"] = _hitbit_high_ptr;
     BranchMap_int_v["hitbit_low"] = _hitbit_low_ptr;
+    BranchMap_int["acqNumber"] = &_acqNumber;
     BranchMap_int["bcid"] = (int*)_bcid;
     BranchMap_int["corrected_bcid"] = (int*)_corrected_bcid;
     BranchMap_int["badbcid"] = (int*)_badbcid;
@@ -79,9 +81,9 @@ ECAL::ECAL(string Mapfile, string Maskfile){
     RangeY[0]=9999;RangeY[1]=-9999;
     getline(fmap,str_buffer);
     while (fmap >> layer >> chip >> channel >> x >> y >>z) {
-        Pos[layer][chip][channel][0] = x;
-        Pos[layer][chip][channel][1] = y;
-        Pos[layer][chip][channel][2] = z;
+        _Pos[layer][chip][channel][0] = x;
+        _Pos[layer][chip][channel][1] = y;
+        _Pos[layer][chip][channel][2] = z;
         if(x==-999||y==-999) continue;
         if(x<RangeX[0]) RangeX[0]=x;
         if(x>RangeX[1]) RangeX[1]=x;
@@ -99,11 +101,12 @@ ECAL::ECAL(string Mapfile, string Maskfile){
     if(!fmask){
         std::cerr << "Error opening mask file: " << Maskfile << std::endl;
         cout<<"initialize without mask file"<<endl;
-        return;
     }
-    getline(fmask,str_buffer);
-    while (fmask >> layer >> chip >> channel) {
-        _mask_channels.push_back(layer*10000+chip*100+channel);
+    else{
+        getline(fmask,str_buffer);
+        while (fmask >> layer >> chip >> channel) {
+            _mask_channels.push_back(layer*10000+chip*100+channel);
+        }
     }
     #pragma endregion
     std::cout << "ECAL object initialized successfully!" << std::endl;

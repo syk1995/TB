@@ -1,1 +1,1 @@
-90764 /data_ilc/flc/shi/TB_2025_3/TB_Data/selected_root/TDC/selected_90764.root
+90764 /data_ilc/flc/shi/TB_2025_3/TB_Data/slcio2root/TDC/ROC_run_090764_tp.root

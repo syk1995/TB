@@ -1,7 +1,7 @@
 #!/bin/bash
 
 RawDIR="/data_ilc/flc/tb-desy/2025/TB2025-03/beamData/eudaq_data/raw"
-RootDir=/data_ilc/flc/shi/TB_2025_3/TB_Data/selected_root/TDC
+RootDir=/data_ilc/flc/shi/TB_2025_3/TB_Data/slcio2root/TDC
 #Position_Scan
 ranges=(
     "90623-90646"
@@ -18,7 +18,8 @@ for range in "${ranges[@]}"; do
     IFS='-' read -r start end <<< "$range"
     for (( run=start; run<=end; run++ )); do
         raw_file="${RawDIR}/raw_siwecal_${run}.raw"
-        root_file=${RootDir}/selected_${run}.root
+        run_name=$(printf "%06d" $run)
+        root_file=${RootDir}/ROC_run_${run_name}_tp.root
         if [[ ! -f "${raw_file}" ]]; then
             echo "${raw_file} not found"
             continue

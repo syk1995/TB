@@ -93,9 +93,9 @@ int ECAL::HitMap(string datalist, string output){
                 channel=_channel_ptr->at(i_hit);
                 adc_high=_adc_high_ptr->at(i_hit);
                 adc_low=_adc_low_ptr->at(i_hit);
-                X = Pos[layer][chip][channel][0];
-                Y = Pos[layer][chip][channel][1];
-                Z = Pos[layer][chip][channel][2];
+                X = _Pos[layer][chip][channel][0];
+                Y = _Pos[layer][chip][channel][1];
+                Z = _Pos[layer][chip][channel][2];
                 EvtNum_layer[layer]++;
                 hitmap_high[layer][0]->Fill(chip,channel);
                 hitmap_high[layer][1]->Fill(X,Y);

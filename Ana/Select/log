@@ -9,13 +9,30 @@ Map X range -86.3 86.3
 Map Y range -86.3 86.3
 ECAL object initialized successfully!
 Found 1 ROOT files in /home/llr/ilc/shi/code/TB_2025_3/script_yukun/Ana/Select/datalist/run_90764.txt
+OBJ: TStyle	cdrStyle	CDR Style : 0 at: 0x187b710
+Output branch Add: acqNumber
+Output branch Add: bcid
+Output branch Add: corrected_bcid
+Output branch Add: badbcid
+Output branch Add: adc_low
+Output branch Add: adc_high
+Output branch Add: autogainbit_low
+Output branch Add: autogainbit_high
+Output branch Add: hitbit_high
+Output branch Add: hitbit_low
+Output branch Merge: acqNumber
 Output branch Merge: bcid
 Output branch Merge: corrected_bcid
+Output branch Add: layer
+Output branch Add: chip
+Output branch Add: sca
+Output branch Add: channel
 Output branch Merge: adc_low
 Output branch Merge: adc_high
 Output branch Merge: hitbit_high
 Output branch Merge: hitbit_low
 Read /home/llr/ilc/shi/data/TB_2025_3/TB_Data/raw2root/TDC/siwecal_90764.root
+Read branch:acqNumber
 Read branch:bcid
 Read branch:corrected_bcid
 Read branch:badbcid
@@ -26,198 +43,165 @@ Read branch:autogainbit_high
 Read branch:hitbit_high
 Read branch:hitbit_low
 Entry 0 in 87130
-Entry 1 in 87130
-Layer 12 Chip 15 SCA 0 Channel 9 corrected_bcid bcid 1885
-Layer 12 Chip 15 SCA 1 Channel 27 corrected_bcid bcid 1889
-Layer 12 Chip 15 SCA 1 Channel 39 corrected_bcid bcid 1889
-Layer 12 Chip 15 SCA 1 Channel 62 corrected_bcid bcid 1889
-Entry 2 in 87130
-Layer 12 Chip 15 SCA 0 Channel 51 corrected_bcid bcid 2740
-Entry 3 in 87130
-Layer 12 Chip 15 SCA 0 Channel 58 corrected_bcid bcid 167
-Layer 8 Chip 1 SCA 0 Channel 28 corrected_bcid bcid 304
-Layer 8 Chip 1 SCA 0 Channel 37 corrected_bcid bcid 304
-Entry 4 in 87130
-Layer 11 Chip 12 SCA 0 Channel 19 corrected_bcid bcid 174
-Layer 12 Chip 12 SCA 0 Channel 19 corrected_bcid bcid 174
-Layer 12 Chip 12 SCA 1 Channel 7 corrected_bcid bcid 218
-Layer 12 Chip 12 SCA 2 Channel 27 corrected_bcid bcid 242
-Layer 11 Chip 5 SCA 0 Channel 39 corrected_bcid bcid 271
-Layer 12 Chip 5 SCA 0 Channel 39 corrected_bcid bcid 271
-Layer 11 Chip 5 SCA 2 Channel 53 corrected_bcid bcid 286
-Layer 12 Chip 5 SCA 2 Channel 41 corrected_bcid bcid 286
-Layer 11 Chip 3 SCA 0 Channel 16 corrected_bcid bcid 540
-Layer 12 Chip 3 SCA 0 Channel 7 corrected_bcid bcid 540
-Layer 12 Chip 5 SCA 3 Channel 60 corrected_bcid bcid 540
-Layer 11 Chip 12 SCA 2 Channel 7 corrected_bcid bcid 569
-Layer 12 Chip 12 SCA 3 Channel 29 corrected_bcid bcid 569
-Layer 8 Chip 10 SCA 0 Channel 13 corrected_bcid bcid 589
-Layer 11 Chip 12 SCA 3 Channel 28 corrected_bcid bcid 589
-Layer 12 Chip 12 SCA 4 Channel 28 corrected_bcid bcid 589
-Layer 11 Chip 12 SCA 4 Channel 43 corrected_bcid bcid 603
-Layer 12 Chip 12 SCA 5 Channel 27 corrected_bcid bcid 604
-Layer 11 Chip 3 SCA 1 Channel 19 corrected_bcid bcid 677
-Layer 12 Chip 3 SCA 1 Channel 10 corrected_bcid bcid 677
-Layer 11 Chip 12 SCA 6 Channel 16 corrected_bcid bcid 789
-Layer 12 Chip 12 SCA 6 Channel 16 corrected_bcid bcid 789
-Layer 11 Chip 5 SCA 3 Channel 50 corrected_bcid bcid 799
-Layer 12 Chip 3 SCA 2 Channel 3 corrected_bcid bcid 799
-Layer 11 Chip 3 SCA 2 Channel 9 corrected_bcid bcid 926
-Layer 11 Chip 3 SCA 3 Channel 22 corrected_bcid bcid 931
-Layer 12 Chip 3 SCA 3 Channel 13 corrected_bcid bcid 931
-Layer 12 Chip 5 SCA 4 Channel 44 corrected_bcid bcid 1009
-Layer 12 Chip 5 SCA 4 Channel 50 corrected_bcid bcid 1009
-Layer 11 Chip 5 SCA 5 Channel 53 corrected_bcid bcid 1160
-Layer 12 Chip 5 SCA 5 Channel 53 corrected_bcid bcid 1161
-Entry 5 in 87130
-Layer 12 Chip 0 SCA 0 Channel 12 corrected_bcid bcid 3345
-Layer 12 Chip 0 SCA 0 Channel 31 corrected_bcid bcid 3345
-Layer 12 Chip 0 SCA 0 Channel 53 corrected_bcid bcid 3345
-Layer 12 Chip 0 SCA 0 Channel 63 corrected_bcid bcid 3345
-Entry 6 in 87130
-Layer 8 Chip 10 SCA 0 Channel 15 corrected_bcid bcid 724
-Layer 12 Chip 0 SCA 0 Channel 45 corrected_bcid bcid 723
-Layer 12 Chip 0 SCA 0 Channel 50 corrected_bcid bcid 723
-Layer 11 Chip 10 SCA 0 Channel 60 corrected_bcid bcid 1138
-Layer 12 Chip 8 SCA 0 Channel 3 corrected_bcid bcid 1138
-Layer 12 Chip 8 SCA 0 Channel 12 corrected_bcid bcid 1138
-Layer 12 Chip 8 SCA 0 Channel 14 corrected_bcid bcid 1138
-Layer 12 Chip 8 SCA 0 Channel 15 corrected_bcid bcid 1138
-Layer 12 Chip 8 SCA 0 Channel 19 corrected_bcid bcid 1138
-Layer 12 Chip 8 SCA 0 Channel 23 corrected_bcid bcid 1138
-Layer 12 Chip 8 SCA 0 Channel 24 corrected_bcid bcid 1138
-Layer 12 Chip 8 SCA 0 Channel 34 corrected_bcid bcid 1138
-Layer 12 Chip 8 SCA 0 Channel 37 corrected_bcid bcid 1138
-Layer 12 Chip 8 SCA 0 Channel 52 corrected_bcid bcid 1138
-Layer 12 Chip 8 SCA 0 Channel 53 corrected_bcid bcid 1138
-Layer 12 Chip 8 SCA 0 Channel 54 corrected_bcid bcid 1138
-Layer 12 Chip 8 SCA 0 Channel 57 corrected_bcid bcid 1138
-Layer 12 Chip 8 SCA 0 Channel 61 corrected_bcid bcid 1138
-Layer 12 Chip 8 SCA 1 Channel 4 corrected_bcid bcid 1142
-Layer 12 Chip 8 SCA 1 Channel 6 corrected_bcid bcid 1142
-Layer 12 Chip 8 SCA 1 Channel 22 corrected_bcid bcid 1142
-Layer 12 Chip 8 SCA 1 Channel 31 corrected_bcid bcid 1142
-Layer 12 Chip 8 SCA 1 Channel 36 corrected_bcid bcid 1142
-Layer 12 Chip 8 SCA 1 Channel 51 corrected_bcid bcid 1142
-Layer 12 Chip 8 SCA 1 Channel 59 corrected_bcid bcid 1142
-Layer 12 Chip 8 SCA 1 Channel 60 corrected_bcid bcid 1142
-Layer 11 Chip 3 SCA 0 Channel 4 corrected_bcid bcid 1246
-Layer 12 Chip 3 SCA 0 Channel 18 corrected_bcid bcid 1246
-Layer 11 Chip 10 SCA 1 Channel 45 corrected_bcid bcid 1495
-Layer 12 Chip 10 SCA 0 Channel 39 corrected_bcid bcid 1495
-Layer 11 Chip 3 SCA 1 Channel 22 corrected_bcid bcid 1671
-Layer 12 Chip 3 SCA 1 Channel 7 corrected_bcid bcid 1671
-Layer 11 Chip 10 SCA 2 Channel 44 corrected_bcid bcid 2828
-Layer 12 Chip 10 SCA 1 Channel 38 corrected_bcid bcid 2828
-Layer 12 Chip 10 SCA 1 Channel 45 corrected_bcid bcid 2828
-Layer 8 Chip 1 SCA 0 Channel 15 corrected_bcid bcid 3296
-Layer 11 Chip 5 SCA 0 Channel 27 corrected_bcid bcid 3296
-Layer 12 Chip 5 SCA 0 Channel 33 corrected_bcid bcid 3296
-Layer 12 Chip 12 SCA 0 Channel 31 corrected_bcid bcid 3403
-Layer 11 Chip 10 SCA 3 Channel 26 corrected_bcid bcid 3443
-Layer 12 Chip 10 SCA 2 Channel 44 corrected_bcid bcid 3443
-Layer 11 Chip 12 SCA 1 Channel 31 corrected_bcid bcid 4819
-Layer 12 Chip 12 SCA 1 Channel 19 corrected_bcid bcid 4819
-Layer 12 Chip 12 SCA 1 Channel 28 corrected_bcid bcid 4819
-Layer 11 Chip 5 SCA 1 Channel 32 corrected_bcid bcid 4961
-Layer 12 Chip 5 SCA 1 Channel 53 corrected_bcid bcid 4961
-Layer 11 Chip 5 SCA 2 Channel 41 corrected_bcid bcid 5029
-Layer 12 Chip 5 SCA 2 Channel 41 corrected_bcid bcid 5029
-Layer 11 Chip 5 SCA 3 Channel 25 corrected_bcid bcid 5210
-Layer 12 Chip 5 SCA 3 Channel 41 corrected_bcid bcid 5210
-Layer 12 Chip 5 SCA 3 Channel 50 corrected_bcid bcid 5210
-Layer 12 Chip 5 SCA 4 Channel 25 corrected_bcid bcid 5591
-Layer 11 Chip 12 SCA 2 Channel 25 corrected_bcid bcid 5630
-Layer 11 Chip 12 SCA 3 Channel 9 corrected_bcid bcid 6270
-Layer 12 Chip 12 SCA 4 Channel 32 corrected_bcid bcid 6270
-Layer 12 Chip 12 SCA 4 Channel 35 corrected_bcid bcid 6270
-Layer 12 Chip 12 SCA 4 Channel 41 corrected_bcid bcid 6270
-Layer 11 Chip 5 SCA 4 Channel 38 corrected_bcid bcid 7192
-Layer 12 Chip 5 SCA 5 Channel 47 corrected_bcid bcid 7193
-Layer 12 Chip 12 SCA 5 Channel 7 corrected_bcid bcid 7236
-Entry 7 in 87130
-Layer 11 Chip 5 SCA 0 Channel 3 corrected_bcid bcid 33
-Layer 11 Chip 5 SCA 0 Channel 60 corrected_bcid bcid 33
-Layer 12 Chip 5 SCA 0 Channel 35 corrected_bcid bcid 33
-Layer 12 Chip 5 SCA 0 Channel 41 corrected_bcid bcid 33
-Layer 11 Chip 5 SCA 1 Channel 48 corrected_bcid bcid 38
-Layer 11 Chip 12 SCA 0 Channel 3 corrected_bcid bcid 38
-Layer 11 Chip 12 SCA 0 Channel 33 corrected_bcid bcid 38
-Layer 12 Chip 5 SCA 1 Channel 13 corrected_bcid bcid 38
-Layer 12 Chip 5 SCA 1 Channel 60 corrected_bcid bcid 38
-Layer 11 Chip 5 SCA 2 Channel 53 corrected_bcid bcid 67
-Layer 11 Chip 10 SCA 0 Channel 41 corrected_bcid bcid 67
-Layer 12 Chip 3 SCA 0 Channel 7 corrected_bcid bcid 67
-Layer 12 Chip 5 SCA 2 Channel 48 corrected_bcid bcid 67
-Layer 12 Chip 10 SCA 0 Channel 32 corrected_bcid bcid 67
-Layer 12 Chip 10 SCA 0 Channel 33 corrected_bcid bcid 67
-Layer 12 Chip 1 SCA 0 Channel 2 corrected_bcid bcid 72
-Layer 12 Chip 1 SCA 0 Channel 24 corrected_bcid bcid 72
-Layer 11 Chip 5 SCA 3 Channel 31 corrected_bcid bcid 121
-Layer 11 Chip 5 SCA 4 Channel 54 corrected_bcid bcid 140
-Layer 12 Chip 5 SCA 4 Channel 53 corrected_bcid bcid 140
-Layer 11 Chip 5 SCA 5 Channel 28 corrected_bcid bcid 170
-Layer 12 Chip 5 SCA 5 Channel 31 corrected_bcid bcid 169
-Layer 11 Chip 5 SCA 6 Channel 22 corrected_bcid bcid 184
-Layer 12 Chip 5 SCA 7 Channel 32 corrected_bcid bcid 184
-Layer 12 Chip 10 SCA 1 Channel 47 corrected_bcid bcid 184
-Layer 12 Chip 3 SCA 1 Channel 16 corrected_bcid bcid 213
-Layer 11 Chip 12 SCA 2 Channel 33 corrected_bcid bcid 223
-Layer 12 Chip 12 SCA 0 Channel 9 corrected_bcid bcid 223
-Layer 12 Chip 12 SCA 0 Channel 27 corrected_bcid bcid 223
-Layer 11 Chip 10 SCA 1 Channel 47 corrected_bcid bcid 228
-Layer 12 Chip 10 SCA 2 Channel 53 corrected_bcid bcid 228
-Layer 8 Chip 10 SCA 0 Channel 4 corrected_bcid bcid 258
-Layer 11 Chip 12 SCA 3 Channel 21 corrected_bcid bcid 257
-Layer 12 Chip 12 SCA 2 Channel 33 corrected_bcid bcid 258
-Layer 11 Chip 5 SCA 7 Channel 45 corrected_bcid bcid 272
-Layer 11 Chip 14 SCA 0 Channel 59 corrected_bcid bcid 272
-Layer 12 Chip 5 SCA 8 Channel 22 corrected_bcid bcid 272
-Layer 12 Chip 14 SCA 0 Channel 62 corrected_bcid bcid 272
-Layer 11 Chip 12 SCA 5 Channel 11 corrected_bcid bcid 277
-Layer 12 Chip 12 SCA 3 Channel 21 corrected_bcid bcid 277
-Layer 12 Chip 5 SCA 9 Channel 45 corrected_bcid bcid 287
-Entry 8 in 87130
-Layer 11 Chip 5 SCA 0 Channel 52 corrected_bcid bcid 142
-Layer 12 Chip 5 SCA 0 Channel 52 corrected_bcid bcid 142
-Layer 8 Chip 10 SCA 0 Channel 13 corrected_bcid bcid 191
-Layer 11 Chip 12 SCA 0 Channel 52 corrected_bcid bcid 191
-Layer 12 Chip 12 SCA 0 Channel 43 corrected_bcid bcid 191
-Layer 11 Chip 5 SCA 1 Channel 27 corrected_bcid bcid 201
-Layer 12 Chip 5 SCA 1 Channel 27 corrected_bcid bcid 201
-Layer 11 Chip 8 SCA 0 Channel 4 corrected_bcid bcid 274
-Layer 12 Chip 8 SCA 0 Channel 17 corrected_bcid bcid 274
-Layer 11 Chip 10 SCA 0 Channel 39 corrected_bcid bcid 362
-Layer 12 Chip 10 SCA 0 Channel 35 corrected_bcid bcid 362
-Layer 12 Chip 10 SCA 0 Channel 54 corrected_bcid bcid 362
-Layer 11 Chip 5 SCA 2 Channel 42 corrected_bcid bcid 391
-Layer 12 Chip 5 SCA 2 Channel 42 corrected_bcid bcid 391
-Layer 11 Chip 12 SCA 1 Channel 25 corrected_bcid bcid 425
-Layer 12 Chip 12 SCA 1 Channel 19 corrected_bcid bcid 425
-Layer 11 Chip 10 SCA 1 Channel 7 corrected_bcid bcid 489
-Layer 12 Chip 10 SCA 1 Channel 7 corrected_bcid bcid 489
-Layer 11 Chip 3 SCA 0 Channel 10 corrected_bcid bcid 523
-Layer 11 Chip 6 SCA 0 Channel 3 corrected_bcid bcid 523
-Layer 11 Chip 6 SCA 0 Channel 44 corrected_bcid bcid 523
-Layer 12 Chip 3 SCA 0 Channel 10 corrected_bcid bcid 523
-Layer 11 Chip 10 SCA 2 Channel 11 corrected_bcid bcid 528
-Layer 12 Chip 10 SCA 2 Channel 17 corrected_bcid bcid 528
-Layer 11 Chip 5 SCA 3 Channel 48 corrected_bcid bcid 587
-Layer 11 Chip 12 SCA 2 Channel 28 corrected_bcid bcid 587
-Layer 12 Chip 5 SCA 3 Channel 54 corrected_bcid bcid 587
-Layer 12 Chip 12 SCA 2 Channel 28 corrected_bcid bcid 587
-Layer 11 Chip 12 SCA 3 Channel 7 corrected_bcid bcid 601
-Layer 12 Chip 12 SCA 3 Channel 7 corrected_bcid bcid 601
-Layer 11 Chip 12 SCA 4 Channel 27 corrected_bcid bcid 924
-Layer 12 Chip 12 SCA 4 Channel 27 corrected_bcid bcid 924
-Layer 11 Chip 3 SCA 1 Channel 63 corrected_bcid bcid 1124
-Layer 12 Chip 3 SCA 1 Channel 57 corrected_bcid bcid 1124
-Layer 12 Chip 3 SCA 1 Channel 63 corrected_bcid bcid 1124
-Layer 11 Chip 5 SCA 4 Channel 25 corrected_bcid bcid 1143
-Layer 12 Chip 5 SCA 4 Channel 25 corrected_bcid bcid 1143
-Layer 11 Chip 5 SCA 5 Channel 39 corrected_bcid bcid 1207
-Layer 12 Chip 5 SCA 5 Channel 39 corrected_bcid bcid 1207
-Entry 9 in 87130
-Layer 12 Chip 15 SCA 0 Channel 60 corrected_bcid bcid 2900
+acqNumber 1 bcid 0 corrected_bcid -999 layer 11 chip 9 sca 0
+acqNumber 2 bcid 0 corrected_bcid -999 layer 11 chip 9 sca 0
+acqNumber 2 bcid 1885 corrected_bcid 1885 layer 12 chip 15 sca 0
+acqNumber 2 bcid 1889 corrected_bcid 1889 layer 12 chip 15 sca 1
+acqNumber 3 bcid 0 corrected_bcid -999 layer 11 chip 9 sca 0
+acqNumber 3 bcid 2740 corrected_bcid 2740 layer 12 chip 15 sca 0
+acqNumber 4 bcid 304 corrected_bcid 304 layer 8 chip 1 sca 0
+acqNumber 4 bcid 0 corrected_bcid -999 layer 11 chip 9 sca 0
+acqNumber 4 bcid 167 corrected_bcid 167 layer 12 chip 15 sca 0
+acqNumber 5 bcid 589 corrected_bcid 589 layer 8 chip 10 sca 0
+acqNumber 5 bcid 540 corrected_bcid 540 layer 11 chip 3 sca 0
+acqNumber 5 bcid 677 corrected_bcid 677 layer 11 chip 3 sca 1
+acqNumber 5 bcid 926 corrected_bcid 926 layer 11 chip 3 sca 2
+acqNumber 5 bcid 931 corrected_bcid 931 layer 11 chip 3 sca 3
+acqNumber 5 bcid 271 corrected_bcid 271 layer 11 chip 5 sca 0
+acqNumber 5 bcid 286 corrected_bcid 286 layer 11 chip 5 sca 2
+acqNumber 5 bcid 799 corrected_bcid 799 layer 11 chip 5 sca 3
+acqNumber 5 bcid 1009 corrected_bcid 1009 layer 11 chip 5 sca 4
+acqNumber 5 bcid 1160 corrected_bcid 1160 layer 11 chip 5 sca 5
+acqNumber 5 bcid 0 corrected_bcid -999 layer 11 chip 9 sca 0
+acqNumber 5 bcid 174 corrected_bcid 174 layer 11 chip 12 sca 0
+acqNumber 5 bcid 218 corrected_bcid 218 layer 11 chip 12 sca 1
+acqNumber 5 bcid 569 corrected_bcid 569 layer 11 chip 12 sca 2
+acqNumber 5 bcid 589 corrected_bcid 589 layer 11 chip 12 sca 3
+acqNumber 5 bcid 603 corrected_bcid 603 layer 11 chip 12 sca 4
+acqNumber 5 bcid 789 corrected_bcid 789 layer 11 chip 12 sca 6
+acqNumber 5 bcid 540 corrected_bcid 540 layer 12 chip 3 sca 0
+acqNumber 5 bcid 677 corrected_bcid 677 layer 12 chip 3 sca 1
+acqNumber 5 bcid 799 corrected_bcid 799 layer 12 chip 3 sca 2
+acqNumber 5 bcid 931 corrected_bcid 931 layer 12 chip 3 sca 3
+acqNumber 5 bcid 271 corrected_bcid 271 layer 12 chip 5 sca 0
+acqNumber 5 bcid 286 corrected_bcid 286 layer 12 chip 5 sca 2
+acqNumber 5 bcid 540 corrected_bcid 540 layer 12 chip 5 sca 3
+acqNumber 5 bcid 1009 corrected_bcid 1009 layer 12 chip 5 sca 4
+acqNumber 5 bcid 1161 corrected_bcid 1161 layer 12 chip 5 sca 5
+acqNumber 5 bcid 174 corrected_bcid 174 layer 12 chip 12 sca 0
+acqNumber 5 bcid 218 corrected_bcid 218 layer 12 chip 12 sca 1
+acqNumber 5 bcid 242 corrected_bcid 242 layer 12 chip 12 sca 2
+acqNumber 5 bcid 569 corrected_bcid 569 layer 12 chip 12 sca 3
+acqNumber 5 bcid 589 corrected_bcid 589 layer 12 chip 12 sca 4
+acqNumber 5 bcid 604 corrected_bcid 604 layer 12 chip 12 sca 5
+acqNumber 5 bcid 789 corrected_bcid 789 layer 12 chip 12 sca 6
+acqNumber 6 bcid 0 corrected_bcid -999 layer 11 chip 9 sca 0
+acqNumber 6 bcid 3345 corrected_bcid 3345 layer 12 chip 0 sca 0
+acqNumber 7 bcid 3296 corrected_bcid 3296 layer 8 chip 1 sca 0
+acqNumber 7 bcid 724 corrected_bcid 724 layer 8 chip 10 sca 0
+acqNumber 7 bcid 1246 corrected_bcid 1246 layer 11 chip 3 sca 0
+acqNumber 7 bcid 1671 corrected_bcid 1671 layer 11 chip 3 sca 1
+acqNumber 7 bcid 3296 corrected_bcid 3296 layer 11 chip 5 sca 0
+acqNumber 7 bcid 865 corrected_bcid 4961 layer 11 chip 5 sca 1
+acqNumber 7 bcid 933 corrected_bcid 5029 layer 11 chip 5 sca 2
+acqNumber 7 bcid 1114 corrected_bcid 5210 layer 11 chip 5 sca 3
+acqNumber 7 bcid 3096 corrected_bcid 7192 layer 11 chip 5 sca 4
+acqNumber 7 bcid 0 corrected_bcid -999 layer 11 chip 9 sca 0
+acqNumber 7 bcid 1138 corrected_bcid 1138 layer 11 chip 10 sca 0
+acqNumber 7 bcid 1495 corrected_bcid 1495 layer 11 chip 10 sca 1
+acqNumber 7 bcid 2828 corrected_bcid 2828 layer 11 chip 10 sca 2
+acqNumber 7 bcid 3443 corrected_bcid 3443 layer 11 chip 10 sca 3
+acqNumber 7 bcid 3403 corrected_bcid 3403 layer 11 chip 12 sca 0
+acqNumber 7 bcid 723 corrected_bcid 4819 layer 11 chip 12 sca 1
+acqNumber 7 bcid 1534 corrected_bcid 5630 layer 11 chip 12 sca 2
+acqNumber 7 bcid 2174 corrected_bcid 6270 layer 11 chip 12 sca 3
+acqNumber 7 bcid 723 corrected_bcid 723 layer 12 chip 0 sca 0
+acqNumber 7 bcid 1246 corrected_bcid 1246 layer 12 chip 3 sca 0
+acqNumber 7 bcid 1671 corrected_bcid 1671 layer 12 chip 3 sca 1
+acqNumber 7 bcid 3296 corrected_bcid 3296 layer 12 chip 5 sca 0
+acqNumber 7 bcid 865 corrected_bcid 4961 layer 12 chip 5 sca 1
+acqNumber 7 bcid 933 corrected_bcid 5029 layer 12 chip 5 sca 2
+acqNumber 7 bcid 1114 corrected_bcid 5210 layer 12 chip 5 sca 3
+acqNumber 7 bcid 1495 corrected_bcid 5591 layer 12 chip 5 sca 4
+acqNumber 7 bcid 3097 corrected_bcid 7193 layer 12 chip 5 sca 5
+acqNumber 7 bcid 1138 corrected_bcid 1138 layer 12 chip 8 sca 0
+acqNumber 7 bcid 1142 corrected_bcid 1142 layer 12 chip 8 sca 1
+acqNumber 7 bcid 1495 corrected_bcid 1495 layer 12 chip 10 sca 0
+acqNumber 7 bcid 2828 corrected_bcid 2828 layer 12 chip 10 sca 1
+acqNumber 7 bcid 3443 corrected_bcid 3443 layer 12 chip 10 sca 2
+acqNumber 7 bcid 3403 corrected_bcid 3403 layer 12 chip 12 sca 0
+acqNumber 7 bcid 723 corrected_bcid 4819 layer 12 chip 12 sca 1
+acqNumber 7 bcid 1534 corrected_bcid 5630 layer 12 chip 12 sca 3
+acqNumber 7 bcid 2174 corrected_bcid 6270 layer 12 chip 12 sca 4
+acqNumber 7 bcid 3140 corrected_bcid 7236 layer 12 chip 12 sca 5
+acqNumber 8 bcid 272 corrected_bcid 272 layer 8 chip 1 sca 0
+acqNumber 8 bcid 258 corrected_bcid 258 layer 8 chip 10 sca 0
+acqNumber 8 bcid 67 corrected_bcid 67 layer 11 chip 3 sca 0
+acqNumber 8 bcid 33 corrected_bcid 33 layer 11 chip 5 sca 0
+acqNumber 8 bcid 38 corrected_bcid 38 layer 11 chip 5 sca 1
+acqNumber 8 bcid 67 corrected_bcid 67 layer 11 chip 5 sca 2
+acqNumber 8 bcid 121 corrected_bcid 121 layer 11 chip 5 sca 3
+acqNumber 8 bcid 140 corrected_bcid 140 layer 11 chip 5 sca 4
+acqNumber 8 bcid 170 corrected_bcid 170 layer 11 chip 5 sca 5
+acqNumber 8 bcid 184 corrected_bcid 184 layer 11 chip 5 sca 6
+acqNumber 8 bcid 272 corrected_bcid 272 layer 11 chip 5 sca 7
+acqNumber 8 bcid 0 corrected_bcid -999 layer 11 chip 9 sca 0
+acqNumber 8 bcid 67 corrected_bcid 67 layer 11 chip 10 sca 0
+acqNumber 8 bcid 228 corrected_bcid 228 layer 11 chip 10 sca 1
+acqNumber 8 bcid 38 corrected_bcid 38 layer 11 chip 12 sca 0
+acqNumber 8 bcid 184 corrected_bcid 184 layer 11 chip 12 sca 1
+acqNumber 8 bcid 223 corrected_bcid 223 layer 11 chip 12 sca 2
+acqNumber 8 bcid 257 corrected_bcid 257 layer 11 chip 12 sca 3
+acqNumber 8 bcid 277 corrected_bcid 277 layer 11 chip 12 sca 5
+acqNumber 8 bcid 272 corrected_bcid 272 layer 11 chip 14 sca 0
+acqNumber 8 bcid 72 corrected_bcid 72 layer 12 chip 1 sca 0
+acqNumber 8 bcid 67 corrected_bcid 67 layer 12 chip 3 sca 0
+acqNumber 8 bcid 213 corrected_bcid 213 layer 12 chip 3 sca 1
+acqNumber 8 bcid 33 corrected_bcid 33 layer 12 chip 5 sca 0
+acqNumber 8 bcid 38 corrected_bcid 38 layer 12 chip 5 sca 1
+acqNumber 8 bcid 67 corrected_bcid 67 layer 12 chip 5 sca 2
+acqNumber 8 bcid 121 corrected_bcid 121 layer 12 chip 5 sca 3
+acqNumber 8 bcid 140 corrected_bcid 140 layer 12 chip 5 sca 4
+acqNumber 8 bcid 169 corrected_bcid 169 layer 12 chip 5 sca 5
+acqNumber 8 bcid 184 corrected_bcid 184 layer 12 chip 5 sca 7
+acqNumber 8 bcid 272 corrected_bcid 272 layer 12 chip 5 sca 8
+acqNumber 8 bcid 287 corrected_bcid 287 layer 12 chip 5 sca 9
+acqNumber 8 bcid 67 corrected_bcid 67 layer 12 chip 10 sca 0
+acqNumber 8 bcid 184 corrected_bcid 184 layer 12 chip 10 sca 1
+acqNumber 8 bcid 228 corrected_bcid 228 layer 12 chip 10 sca 2
+acqNumber 8 bcid 223 corrected_bcid 223 layer 12 chip 12 sca 0
+acqNumber 8 bcid 258 corrected_bcid 258 layer 12 chip 12 sca 2
+acqNumber 8 bcid 277 corrected_bcid 277 layer 12 chip 12 sca 3
+acqNumber 8 bcid 272 corrected_bcid 272 layer 12 chip 14 sca 0
+acqNumber 9 bcid 1143 corrected_bcid 1143 layer 8 chip 3 sca 0
+acqNumber 9 bcid 191 corrected_bcid 191 layer 8 chip 10 sca 0
+acqNumber 9 bcid 523 corrected_bcid 523 layer 11 chip 3 sca 0
+acqNumber 9 bcid 1124 corrected_bcid 1124 layer 11 chip 3 sca 1
+acqNumber 9 bcid 142 corrected_bcid 142 layer 11 chip 5 sca 0
+acqNumber 9 bcid 201 corrected_bcid 201 layer 11 chip 5 sca 1
+acqNumber 9 bcid 391 corrected_bcid 391 layer 11 chip 5 sca 2
+acqNumber 9 bcid 587 corrected_bcid 587 layer 11 chip 5 sca 3
+acqNumber 9 bcid 1143 corrected_bcid 1143 layer 11 chip 5 sca 4
+acqNumber 9 bcid 1207 corrected_bcid 1207 layer 11 chip 5 sca 5
+acqNumber 9 bcid 523 corrected_bcid 523 layer 11 chip 6 sca 0
+acqNumber 9 bcid 274 corrected_bcid 274 layer 11 chip 8 sca 0
+acqNumber 9 bcid 0 corrected_bcid -999 layer 11 chip 9 sca 0
+acqNumber 9 bcid 362 corrected_bcid 362 layer 11 chip 10 sca 0
+acqNumber 9 bcid 489 corrected_bcid 489 layer 11 chip 10 sca 1
+acqNumber 9 bcid 528 corrected_bcid 528 layer 11 chip 10 sca 2
+acqNumber 9 bcid 191 corrected_bcid 191 layer 11 chip 12 sca 0
+acqNumber 9 bcid 425 corrected_bcid 425 layer 11 chip 12 sca 1
+acqNumber 9 bcid 587 corrected_bcid 587 layer 11 chip 12 sca 2
+acqNumber 9 bcid 601 corrected_bcid 601 layer 11 chip 12 sca 3
+acqNumber 9 bcid 924 corrected_bcid 924 layer 11 chip 12 sca 4
+acqNumber 9 bcid 523 corrected_bcid 523 layer 12 chip 3 sca 0
+acqNumber 9 bcid 1124 corrected_bcid 1124 layer 12 chip 3 sca 1
+acqNumber 9 bcid 142 corrected_bcid 142 layer 12 chip 5 sca 0
+acqNumber 9 bcid 201 corrected_bcid 201 layer 12 chip 5 sca 1
+acqNumber 9 bcid 391 corrected_bcid 391 layer 12 chip 5 sca 2
+acqNumber 9 bcid 587 corrected_bcid 587 layer 12 chip 5 sca 3
+acqNumber 9 bcid 1143 corrected_bcid 1143 layer 12 chip 5 sca 4
+acqNumber 9 bcid 1207 corrected_bcid 1207 layer 12 chip 5 sca 5
+acqNumber 9 bcid 274 corrected_bcid 274 layer 12 chip 8 sca 0
+acqNumber 9 bcid 362 corrected_bcid 362 layer 12 chip 10 sca 0
+acqNumber 9 bcid 489 corrected_bcid 489 layer 12 chip 10 sca 1
+acqNumber 9 bcid 528 corrected_bcid 528 layer 12 chip 10 sca 2
+acqNumber 9 bcid 191 corrected_bcid 191 layer 12 chip 12 sca 0
+acqNumber 9 bcid 425 corrected_bcid 425 layer 12 chip 12 sca 1
+acqNumber 9 bcid 587 corrected_bcid 587 layer 12 chip 12 sca 2
+acqNumber 9 bcid 601 corrected_bcid 601 layer 12 chip 12 sca 3
+acqNumber 9 bcid 924 corrected_bcid 924 layer 12 chip 12 sca 4
+acqNumber 10 bcid 0 corrected_bcid -999 layer 11 chip 9 sca 0
+acqNumber 10 bcid 2900 corrected_bcid 2900 layer 12 chip 15 sca 0
 Read over /home/llr/ilc/shi/data/TB_2025_3/TB_Data/raw2root/TDC/siwecal_90764.root
-HitMap execution time: 0.744286 seconds
+HitMap execution time: 7.41643 seconds
