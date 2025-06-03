@@ -1,0 +1,135 @@
+Initializing ECAL object...
+Layer Number: 15
+Chip Number: 16
+SCA Number: 15
+Channel Number: 64
+Map file: /home/llr/ilc/shi/code/TB_2025_3/script_yukun/Ana/mapping/All_layers_mapping.txt
+Map X range -86.3 86.3
+Map Y range -86.3 86.3
+initialize without mask file
+ECAL object initialized successfully!
+Found 1 ROOT files and 1 BIF files in /home/llr/ilc/shi/code/TB_2025_3/script_yukun/Ana/BIF/datalist/run_90764.txt
+Read /grid_mnt/vol_home/llr/ilc/shi/data/TB_2025_3/TB_Data/selected_root/TDC/selected_90764.root and BIF file /grid_mnt/vol_home/llr/ilc/shi/data/TB_2025_3/TB_Data/slcio2root/BIF/ROC_run_090764_tp.root
+Read branch:acqNumber
+Read branch:bcid
+Read branch:corrected_bcid
+Read branch:badbcid
+Read branch:adc_low
+Read branch:adc_high
+Read branch:autogainbit_low
+Read branch:autogainbit_high
+Read branch:hitbit_high
+Read branch:hitbit_low
+Read branch:layer
+Read branch:chip
+Read branch:sca
+Read branch:channel
+Read branch:BIF_cycle
+Read branch:BIF_bcid
+Read branch:BIF_TDC
+Read branch:HCAL_cycle
+Read branch:HCAL_bcid
+Scanning BCID offset for BIF with offset -2
+Entry 0 in 1057950 for ECAL, Entry 0 in 84441 for BIF
+Entry 1000 in 1057950 for ECAL, Entry 82 in 84441 for BIF
+Entry 2000 in 1057950 for ECAL, Entry 157 in 84441 for BIF
+Entry 3000 in 1057950 for ECAL, Entry 230 in 84441 for BIF
+Entry 4000 in 1057950 for ECAL, Entry 305 in 84441 for BIF
+Entry 5000 in 1057950 for ECAL, Entry 381 in 84441 for BIF
+Entry 6000 in 1057950 for ECAL, Entry 457 in 84441 for BIF
+Entry 7000 in 1057950 for ECAL, Entry 533 in 84441 for BIF
+Entry 8000 in 1057950 for ECAL, Entry 608 in 84441 for BIF
+Entry 9000 in 1057950 for ECAL, Entry 687 in 84441 for BIF
+Entry 10000 in 1057950 for ECAL, Entry 763 in 84441 for BIF
+Entry 11000 in 1057950 for ECAL, Entry 839 in 84441 for BIF
+Entry 12000 in 1057950 for ECAL, Entry 913 in 84441 for BIF
+Entry 13000 in 1057950 for ECAL, Entry 991 in 84441 for BIF
+Entry 14000 in 1057950 for ECAL, Entry 1065 in 84441 for BIF
+Entry 15000 in 1057950 for ECAL, Entry 1140 in 84441 for BIF
+Entry 16000 in 1057950 for ECAL, Entry 1217 in 84441 for BIF
+Entry 17000 in 1057950 for ECAL, Entry 1306 in 84441 for BIF
+Entry 18000 in 1057950 for ECAL, Entry 1378 in 84441 for BIF
+Entry 19000 in 1057950 for ECAL, Entry 1452 in 84441 for BIF
+Entry 20000 in 1057950 for ECAL, Entry 1529 in 84441 for BIF
+Entry 21000 in 1057950 for ECAL, Entry 1606 in 84441 for BIF
+Entry 22000 in 1057950 for ECAL, Entry 1682 in 84441 for BIF
+Entry 23000 in 1057950 for ECAL, Entry 1760 in 84441 for BIF
+Entry 24000 in 1057950 for ECAL, Entry 1836 in 84441 for BIF
+Entry 25000 in 1057950 for ECAL, Entry 1911 in 84441 for BIF
+Entry 26000 in 1057950 for ECAL, Entry 1987 in 84441 for BIF
+Entry 27000 in 1057950 for ECAL, Entry 2095 in 84441 for BIF
+Entry 28000 in 1057950 for ECAL, Entry 2268 in 84441 for BIF
+Entry 29000 in 1057950 for ECAL, Entry 2389 in 84441 for BIF
+Entry 30000 in 1057950 for ECAL, Entry 2462 in 84441 for BIF
+Entry 31000 in 1057950 for ECAL, Entry 2535 in 84441 for BIF
+Entry 32000 in 1057950 for ECAL, Entry 2611 in 84441 for BIF
+Entry 33000 in 1057950 for ECAL, Entry 2689 in 84441 for BIF
+Entry 34000 in 1057950 for ECAL, Entry 2765 in 84441 for BIF
+Entry 35000 in 1057950 for ECAL, Entry 2840 in 84441 for BIF
+Entry 36000 in 1057950 for ECAL, Entry 2914 in 84441 for BIF
+Entry 37000 in 1057950 for ECAL, Entry 2984 in 84441 for BIF
+Entry 38000 in 1057950 for ECAL, Entry 3055 in 84441 for BIF
+Entry 39000 in 1057950 for ECAL, Entry 3131 in 84441 for BIF
+Entry 40000 in 1057950 for ECAL, Entry 3208 in 84441 for BIF
+Entry 41000 in 1057950 for ECAL, Entry 3285 in 84441 for BIF
+Entry 42000 in 1057950 for ECAL, Entry 3360 in 84441 for BIF
+Entry 43000 in 1057950 for ECAL, Entry 3432 in 84441 for BIF
+Entry 44000 in 1057950 for ECAL, Entry 3506 in 84441 for BIF
+Entry 45000 in 1057950 for ECAL, Entry 3580 in 84441 for BIF
+Entry 46000 in 1057950 for ECAL, Entry 3657 in 84441 for BIF
+Entry 47000 in 1057950 for ECAL, Entry 3734 in 84441 for BIF
+Entry 48000 in 1057950 for ECAL, Entry 3812 in 84441 for BIF
+Entry 49000 in 1057950 for ECAL, Entry 3889 in 84441 for BIF
+Scanning BCID offset for HCAL with offset 0
+Entry 0 in 1057950 for ECAL, Entry 0 in 84441 for BIF
+Entry 1000 in 1057950 for ECAL, Entry 79 in 84441 for BIF
+Entry 2000 in 1057950 for ECAL, Entry 154 in 84441 for BIF
+Entry 3000 in 1057950 for ECAL, Entry 227 in 84441 for BIF
+Entry 4000 in 1057950 for ECAL, Entry 302 in 84441 for BIF
+Entry 5000 in 1057950 for ECAL, Entry 378 in 84441 for BIF
+Entry 6000 in 1057950 for ECAL, Entry 454 in 84441 for BIF
+Entry 7000 in 1057950 for ECAL, Entry 530 in 84441 for BIF
+Entry 8000 in 1057950 for ECAL, Entry 605 in 84441 for BIF
+Entry 9000 in 1057950 for ECAL, Entry 684 in 84441 for BIF
+Entry 10000 in 1057950 for ECAL, Entry 760 in 84441 for BIF
+Entry 11000 in 1057950 for ECAL, Entry 836 in 84441 for BIF
+Entry 12000 in 1057950 for ECAL, Entry 910 in 84441 for BIF
+Entry 13000 in 1057950 for ECAL, Entry 988 in 84441 for BIF
+Entry 14000 in 1057950 for ECAL, Entry 1062 in 84441 for BIF
+Entry 15000 in 1057950 for ECAL, Entry 1137 in 84441 for BIF
+Entry 16000 in 1057950 for ECAL, Entry 1214 in 84441 for BIF
+Entry 17000 in 1057950 for ECAL, Entry 1303 in 84441 for BIF
+Entry 18000 in 1057950 for ECAL, Entry 1375 in 84441 for BIF
+Entry 19000 in 1057950 for ECAL, Entry 1449 in 84441 for BIF
+Entry 20000 in 1057950 for ECAL, Entry 1526 in 84441 for BIF
+Entry 21000 in 1057950 for ECAL, Entry 1603 in 84441 for BIF
+Entry 22000 in 1057950 for ECAL, Entry 1679 in 84441 for BIF
+Entry 23000 in 1057950 for ECAL, Entry 1757 in 84441 for BIF
+Entry 24000 in 1057950 for ECAL, Entry 1833 in 84441 for BIF
+Entry 25000 in 1057950 for ECAL, Entry 1908 in 84441 for BIF
+Entry 26000 in 1057950 for ECAL, Entry 1984 in 84441 for BIF
+Entry 27000 in 1057950 for ECAL, Entry 2092 in 84441 for BIF
+Entry 28000 in 1057950 for ECAL, Entry 2265 in 84441 for BIF
+Entry 29000 in 1057950 for ECAL, Entry 2386 in 84441 for BIF
+Entry 30000 in 1057950 for ECAL, Entry 2459 in 84441 for BIF
+Entry 31000 in 1057950 for ECAL, Entry 2532 in 84441 for BIF
+Entry 32000 in 1057950 for ECAL, Entry 2608 in 84441 for BIF
+Entry 33000 in 1057950 for ECAL, Entry 2686 in 84441 for BIF
+Entry 34000 in 1057950 for ECAL, Entry 2762 in 84441 for BIF
+Entry 35000 in 1057950 for ECAL, Entry 2837 in 84441 for BIF
+Entry 36000 in 1057950 for ECAL, Entry 2911 in 84441 for BIF
+Entry 37000 in 1057950 for ECAL, Entry 2981 in 84441 for BIF
+Entry 38000 in 1057950 for ECAL, Entry 3053 in 84441 for BIF
+Entry 40000 in 1057950 for ECAL, Entry 3205 in 84441 for BIF
+Entry 41000 in 1057950 for ECAL, Entry 3282 in 84441 for BIF
+Entry 42000 in 1057950 for ECAL, Entry 3357 in 84441 for BIF
+Entry 43000 in 1057950 for ECAL, Entry 3429 in 84441 for BIF
+Entry 44000 in 1057950 for ECAL, Entry 3503 in 84441 for BIF
+Entry 45000 in 1057950 for ECAL, Entry 3577 in 84441 for BIF
+Entry 46000 in 1057950 for ECAL, Entry 3654 in 84441 for BIF
+Entry 47000 in 1057950 for ECAL, Entry 3731 in 84441 for BIF
+Entry 48000 in 1057950 for ECAL, Entry 3809 in 84441 for BIF
+Entry 49000 in 1057950 for ECAL, Entry 3886 in 84441 for BIF
+Read over /grid_mnt/vol_home/llr/ilc/shi/data/TB_2025_3/TB_Data/selected_root/TDC/selected_90764.root
+OBJ: TStyle	cdrStyle	CDR Style : 0 at: 0x4cf8dd0
+TDC execution time: 355.267 seconds

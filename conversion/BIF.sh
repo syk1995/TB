@@ -14,7 +14,9 @@ ranges=(
     "90748-90751"
     "90760-90769"
 )
-ranges=("90764-90764")
+ranges=("90764-90765")
+BIF_offset=-2
+HCAL_offset=-3
 for range in "${ranges[@]}"; do
     IFS='-' read -r start end <<< "$range"
     for (( run=start; run<=end; run++ )); do

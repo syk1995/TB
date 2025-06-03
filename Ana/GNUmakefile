@@ -5,7 +5,7 @@
 #############################################
 
 ECAL=ECAL
-BIF=BIF
+BIF_Scan=BIF_Scan
 PLOT=cepcplotstyle
 TARGET1=Select
 TARGET2=HitMap
@@ -35,7 +35,7 @@ CXX = g++
 CPPFLAGS = -g -Wall -I$(DIR_INCLUDE) -I$(PLOT_INCLUDE) 
 
 ####### Make Execuatbles#######
-all: $(TARGET1) $(TARGET2) $(TARGET3) $(TARGET4) $(BIF)
+all: $(TARGET1) $(TARGET2) $(TARGET3) $(TARGET4) $(BIF_Scan)
 
 $(DIR_OBJ)/%.o:$(DIR_SRC)/%.cxx  
 	$(CXX) $(CPPFLAGS)  -c $(DIR_SRC)/$(notdir $<)  -o $(DIR_OBJ)/$(notdir $@)
@@ -54,7 +54,7 @@ $(TARGET3): $(DIR_OBJ)/$(ECAL).o $(DIR_OBJ)/$(TARGET3).o $(DIR_OBJ)/$(PLOT).o
 $(TARGET4): $(DIR_OBJ)/$(ECAL).o $(DIR_OBJ)/$(TARGET4).o $(DIR_OBJ)/$(PLOT).o
 	$(CXX) $^ $(CPPLIBS) -o $(DIR_BIN)/$(notdir $@)
 
-$(BIF): $(DIR_OBJ)/$(ECAL).o $(DIR_OBJ)/$(BIF).o $(DIR_OBJ)/$(PLOT).o	
+$(BIF_Scan): $(DIR_OBJ)/$(ECAL).o $(DIR_OBJ)/$(BIF_Scan).o $(DIR_OBJ)/$(PLOT).o	
 	$(CXX) $^ $(CPPLIBS) -o $(DIR_BIN)/$(notdir $@)
 
 .PHONY:clean

@@ -36,9 +36,8 @@ int BIF(string inputFile, string outputFile) {
         std::cerr << "Error opening file: " << e.what() << std::endl;
         return -1;
     }
-    Evt_num=0;
-    for(int i = 0; (event = reader->readNextEvent()) && i>-1; i++){
-        if(i%1000==0)cout << "Processing event " << i << endl;
+    for(Evt_num=0; (event = reader->readNextEvent()) && Evt_num>-1; Evt_num++){
+        if(Evt_num%1000==0)cout << "Processing event " << Evt_num << endl;
         BIF_Clear();
         HCAL_Clear();
         try{
@@ -50,7 +49,6 @@ int BIF(string inputFile, string outputFile) {
                 BIF_bcid_v->push_back(it_BIF->first);
                 BIF_TDC_v->push_back(it_BIF->second);
             }
-            Evt_num++;
             tree->Fill();
             /*cout << "Event number: " << Evt_num << " acqNumber: " << BIF_acqNumber << " cycleNr: " << BIF_cycleNr << endl;
             for(int j=0; j<BIF_bcid_v->size(); j++){
@@ -101,7 +99,9 @@ std::vector<int> HCAL_BuildEvents(LCCollection* hcalcollection) {
         HCAL_bunchXID = obj->getIntVal(1);
         HCAL_eventNr = obj->getIntVal(2);
         HCAL_chipID = obj->getIntVal(3);
-        HCAL_nChannels = obj->getIntVal(4);    
+        HCAL_nChannels = obj->getIntVal(4);
+        if(HCAL_bunchXID>4095)continue;
+        if(find(HCAL_bcid_v.begin(), HCAL_bcid_v.end(), HCAL_bunchXID) == HCAL_bcid_v.end()) HCAL_bcid_v.push_back(HCAL_bunchXID);    
         /*for (int j = 0; j < HCAL_nChannels; ++j) {
             HCAL_tdc14bit.push_back(obj->getIntVal(5 + j));  
             HCAL_adc14bit.push_back(obj->getIntVal(5 + HCAL_nChannels + j));  
